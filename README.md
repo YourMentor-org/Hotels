@@ -1,1 +1,3 @@
 Hotel Project
+
+Some information

@@ -13,7 +13,7 @@
       </div>
     </header>
     <main>
-      <form class="form" action="/echo" method="get">
+      <form class="form" action="/echo" method="post">
         <label class="visually-hidden">Введите направление, город, название отеля
           <input class="form__search form__icon--search" type="search" name="search" placeholder="Направление, город, название отеля: например, Париж, Милан" autofocus>
         </label>
@@ -22,10 +22,10 @@
         <label class="form__label" for="date-out">Выберите дату отъезда</label>
         <input class="form__input" type="text" name="date-departure" id="date-out" placeholder="24 января, 2017">
         <label class="form__label" for="num-grownups">Взрослых</label>
-        <input class="form__input" type="number" name="num-grownups" id="num-grownups" min="1" max="10" placeholder="2">
+        <input class="form__input  form__input--number" type="number" name="num-grownups" id="num-grownups" min="1" max="10" placeholder="2">
         <label class="form__label" for="num-children">Детей</label>
-        <input class="form__input" type="number" name="num-children" id="num-children" min="1" max="10" placeholder="1">
-        <input type="checkbox" name="discount" id="discount">
+        <input class="form__input  form__input--number" type="number" name="num-children" id="num-children" min="1" max="10" placeholder="1">
+        <input class="form__checkbox" type="checkbox" name="discount" id="discount">
         <label class="form__label form__icon--plane" for="discount">Добавить перелет и получить скидку</label>
         <button class="btn  btn--form" type="submit">Начать поиска</button>
         <div class="form__list">

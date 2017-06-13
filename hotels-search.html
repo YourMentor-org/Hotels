@@ -18,12 +18,11 @@
       <span class="result__item  result__item--icon-month">3</span>
       <span class="result__item  result__item--icon-grownups">2</span>
       <span class="result__item  result__item--icon-children">1</span>
-      <!-- Какой тут нужен тег? Ссылка или button? -->
-      <a class="btn  btn--result" href="#">Изменить</a>
+      <button class="btn  btn--result" type="button">Изменить</button>
     </div>
   </header>
   <main>
-    <form class="form form--page-one" action="/echo" method="get">
+    <form class="form form--page-one" action="/echo" method="post">
       <label class="visually-hidden" for="search">Поиск по названию</label>
       <input class="form__search  form__search--icon-search"  type="search" name="search" id="search" placeholder="Поиск по названию">
     </form>

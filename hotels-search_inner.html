@@ -7,6 +7,10 @@
     <title>Гостиницы: расширенный поиск</title>
   </head>
   <body class="page-inner">
+    <svg style="display:none">
+      <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
+    </svg>
+
     <header class="header-main  header-main--width">
       <div class="header-main__slogan">
         <a class="header-main__logo" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
@@ -18,8 +22,9 @@
     </header>
     <main>
       <form class="form form--page-inner" action="/echo" method="post">
-        <label class="visually-hidden" for="search">Введите направление, город, название отеля</label>
-        <input class="form__search form__search--icon-search" type="search" name="search" id ="search" placeholder="Направление, город, название отеля: например, Париж, Милан" autofocus>
+        <label class="visually-hidden" for="form-search">Введите направление, город, название отеля</label>
+        <input class="form__search" type="search" name="search" id="form-search" placeholder="Направление, город, название отеля: например, Париж, Милан">
+        <svg class="icon  icon--search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg>
         <label class="form__label" for="date-in">Выберите дату вселения</label>
         <input class="form__input" type="text" name="arrival-date" id="date-in" placeholder="23 января, 2017">
         <label class="form__label" for="date-out">Выберите дату отъезда</label>

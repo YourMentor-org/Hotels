@@ -143,7 +143,45 @@ a {
   position: relative;
   width: 1148px;
   margin: 0 auto;
+  padding: 58px 96px 38px;
   background-color: #ffffff;
   border-radius: 5px;
   z-index: 1;
 }
+.form__search {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 954px;
+  padding: 7px 12px;
+  margin-bottom: 30px;
+  font-family: "Proxima Nova", Tahoma, sans-serif;
+  /*Размер по макету 16px*/
+  font-size: 14px;
+  color: #a5a7b5;
+  border: none;
+  border-bottom: 1px solid #35363c;
+}
+.form__search::-webkit-input-placeholder {color: #a5a7b5;}
+.form__search::-moz-placeholder {color: #a5a7b5;}
+.form__search:-moz-placeholder  {color: #a5a7b5;}
+.form__search:-ms-input-placeholder {color: #a5a7b5;}
+
+.icon {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+}
+.icon--search { 
+  width: 16px;
+  height: 16px;
+  fill: none; 
+  stroke: #db0536; 
+  stroke-linecap: round; 
+  stroke-linejoin: round; 
+  stroke-width: 2px; 
+  fill-rule: evenodd;
+  top: 65px;
+  right: 104px;
+ }
+ 

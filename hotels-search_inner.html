@@ -9,6 +9,7 @@
   <body class="page-inner">
     <svg style="display:none">
       <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
+      <symbol id="down-arrow" viewbox="0 0 14 9"><path d="M1.97.01L7 5.07 12.03.01l1.96 1.96-5.03 5.06L7 8.99 5.04 7.03.01 1.97z"/></symbol>
     </svg>
 
     <header class="header-main  header-main--width">
@@ -25,14 +26,24 @@
         <label class="visually-hidden" for="form-search">Введите направление, город, название отеля</label>
         <input class="form__search" type="search" name="search" id="form-search" placeholder="Направление, город, название отеля: например, Париж, Милан">
         <svg class="icon  icon--search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg>
-        <label class="form__label" for="date-in">Выберите дату вселения</label>
-        <input class="form__input" type="text" name="arrival-date" id="date-in" placeholder="23 января, 2017">
-        <label class="form__label" for="date-out">Выберите дату отъезда</label>
-        <input class="form__input" type="text" name="date-departure" id="date-out" placeholder="24 января, 2017">
-        <label class="form__label" for="input-number1">Взрослых</label>
-        <input class="form__input  form__input--number" type="number" name="input-number1" id="input-number1" min="1" max="10" placeholder="2">
-        <label class="form__label" for="input-number2">Детей</label>
-        <input class="form__input  form__input--number" type="number" name="input-number2" id="input-number2" min="1" max="10" placeholder="1">
+        <div class="form__wrap">
+          <label class="form__label" for="date-in">Выберите дату вселения</label>
+          <input class="form__input" type="text" name="arrival-date" id="date-in" placeholder="23 января, 2017">
+        </div>
+        <div class="form__wrap">
+          <label class="form__label" for="date-out">Выберите дату отъезда</label>
+          <input class="form__input" type="text" name="date-departure" id="date-out" placeholder="24 января, 2017">
+        </div>
+        <div class="form__wrap">
+          <label class="form__label" for="input-number1">Взрослых</label>
+          <input class="form__input  form__input--number" type="number" name="input-number1" id="input-number1" min="1" max="10" placeholder="2">
+          <svg class="icon  icon--down-arrow1" width="14" height="9"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#down-arrow"></use></svg>
+        </div>
+        <div class="form__wrap">
+          <label class="form__label" for="input-number2">Детей</label>
+          <input class="form__input  form__input--number" type="number" name="input-number2" id="input-number2" min="1" max="10" placeholder="1">
+          <svg class="icon  icon--down-arrow2" width="14" height="9"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#down-arrow"></use></svg>
+        </div>
         <input class="form__checkbox" type="checkbox" name="discount" id="discount">
         <label class="form__label form__label-icon--plane" for="discount">Добавить перелет и получить скидку</label>
         <button class="btn  btn--form" type="submit">Начать поиска</button>

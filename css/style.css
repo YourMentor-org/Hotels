@@ -1,21 +1,86 @@
 @font-face {
-  font-family: "Proxima Nova";
-  src:
-    url('../fonts/proxima_nova_light.eot'),
-    url('../fonts/proxima_nova_light.woff2') format('woff2'),
-    url('../fonts/proxima_nova_light.woff') format('woff'),
-    url('../proxima_nova_light.ttf') format('truetype');
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_light.eot');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url('../fonts/proxima_nova_regular.eot');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_bold.eot');
+  font-weight: normal;
+  font-style: normal; 
 }
 
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url('../fonts/proxima_nova_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+/*
 @font-face {
   font-family: "Proxima Nova";
   src:
     url('../fonts/proxima_nova_regular.eot'),
     url('../fonts/proxima_nova_regular.woff2') format('woff2'),
     url('../fonts/proxima_nova_regular.woff') format('woff'),
-    url('../proxima_nova_regular.ttf') format('truetype');
+    url('../fonts/proxima_nova_regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,6 +95,7 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
 
 *,
 *::after,
@@ -40,10 +106,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Proxima Nova", Tahoma, sans-serif;
   font-size: 14px;
   line-height: 31px;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   color: #000000;
 }
@@ -72,13 +137,10 @@ a {
   position: absolute;
 }
 .page-inner {
-  /* Только для оформления сетки */
-  box-shadow: 0 0 0 2px green;
-  
   box-sizing: border-box;
   position: relative;
   margin: auto;
-  width: 1800px;
+  width: 100%;
   padding: 0 20px;
   background-color: #90a3b3;
   background-image: url("../img/background.jpg");
@@ -107,8 +169,8 @@ a {
   margin: 0 auto;
 }
 .header-main__slogan {
-  /* Только для оформления сетки */
   box-shadow: 0 0 0 2px blue;
+  /* Только для оформления сетки */
   
   display: flex;
   justify-content: space-between;
@@ -118,7 +180,6 @@ a {
   margin-top: 2px;
 }
 .header-main__wrap {
-    
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -128,22 +189,27 @@ a {
   padding: 0;
   margin: 0;
   /*Размер должен быть по макету 28px*/
+  font-family: "Proxima Nova", Tahoma, sans-serif;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: normal;
   text-transform: uppercase;
 }
 .header-main__subtitle {
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  font-weight: 300;
+  font-family: "Proxima Nova  Regular", Tahoma, sans-serif;
+  /*Размер должен быть по макету 16px*/
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .form {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: 1148px;
   margin: 0 auto;
-  padding: 58px 96px 38px;
+  padding: 58px 98px 38px;
   background-color: #ffffff;
   border-radius: 5px;
   z-index: 1;
@@ -154,13 +220,17 @@ a {
   box-sizing: border-box;
   width: 954px;
   padding: 7px 12px;
-  margin-bottom: 30px;
-  font-family: "Proxima Nova", Tahoma, sans-serif;
+  margin-bottom: 45px;
+  font-family: "Proxima Nova  Regular", Tahoma, sans-serif;
   /*Размер по макету 16px*/
   font-size: 14px;
   color: #a5a7b5;
   border: none;
   border-bottom: 1px solid #35363c;
+  transition: 100ms;
+}
+.form__search:hover {
+  border-bottom: 1px solid #a5a7b5;
 }
 .form__search::-webkit-input-placeholder {color: #a5a7b5;}
 .form__search::-moz-placeholder {color: #a5a7b5;}
@@ -183,5 +253,57 @@ a {
   fill-rule: evenodd;
   top: 65px;
   right: 104px;
+ }
+.form__wrap:nth-of-type(1n) {
+  margin-right: 10px;
+}
+.form__wrap:nth-of-type(2) {
+  margin-right: 42px;
+}
+.form__label {
+  display: block;
+  font-family: "Proxima Nova  Regular", Tahoma, sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #1e1f26;
+}
+.form__input {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 12px 13px;
+  font-family: "Proxima Nova  Regular", Tahoma, sans-serif;
+  /*Размер по макету px*/
+  font-size: 18px;
+  color: #db0536;
+  font-weight: 600;
+  border: 1px solid #35363c;
+  border-radius: 2px; 
+}
+.form__input--number {
+   width: 104px;
+}
+ .form__input::-webkit-input-placeholder {color: #db0536;}
+ .form__input::-moz-placeholder {color: #db0536;}
+ .form__input:-moz-placeholder  {color: #db0536;}
+ .form__input:-ms-input-placeholder {color: #db0536;}
+ 
+ 
+ 
+.icon--down-arrow1,
+.icon--down-arrow2 {
+  width: 14px;
+  height: 19px;
+  fill:#35363c;
+  fill-rule:evenodd;
+  top: 187px;
+  right: 309px;  
+ }
+.icon--down-arrow2 {
+  top: 187px;
+  right: 191px;    
+}
+ .form__checkbox {
+  width: 954px;
  }
  

@@ -108,6 +108,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
   font-family: "Proxima Nova Regular", Tahoma, sans-serif;
   font-size: 14px;
   line-height: 31px;
@@ -204,10 +205,12 @@ a {
 .form {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   position: relative;
   width: 1148px;
   margin: 0 auto;
-  padding: 58px 98px 38px;
+  padding: 0 98px;
+  padding-top: 58px;
   background-color: #ffffff;
   border-radius: 5px;
   z-index: 1;
@@ -259,7 +262,7 @@ a {
 .form__wrap:nth-of-type(2) {
   margin-right: 42px;
 }
-.form__wrap:nth-of-type(5) {
+.form__wrap:nth-of-type(n+5) {
   margin-bottom: 30px;
 }
 .form__label {
@@ -289,9 +292,6 @@ a {
  .form__input::-moz-placeholder {color: #db0536;}
  .form__input:-moz-placeholder  {color: #db0536;}
  .form__input:-ms-input-placeholder {color: #db0536;}
- 
- 
- 
 .icon--down-arrow1,
 .icon--down-arrow2 {
   width: 14px;
@@ -339,13 +339,13 @@ a {
   display: block;
 }
 .form__checkbox:checked + .form__label-checkbox::after {
-   content: "";
-    position: absolute;
-    top: 9px;
-    left: 5px;
-    width: 13px;
-    height: 13px;
-    background-color: #db0536;
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: #db0536;
 }
 .icon--plane {
   width: 18px;
@@ -368,15 +368,59 @@ a {
   cursor: pointer;
 }
 .btn--form {
-  align-self: flex-start;
   margin: 0 auto;
   /*Размер по макету 18px*/
   font-size: 16px;
   padding: 20px 78px;
+  margin-bottom: 33px;
 }
 .btn--form:hover {
   background-color: #ac0027;
 } 
 .result {
   width: 100%;
+}
+.form__wrap--result {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 } 
+.result {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  padding: 0 10px;
+  /*Размер по макету 14px*/
+  font-size: 14px;
+  color: #1e1f26;
+  margin: 0;
+}
+.result__item--indent {
+  padding-left: 7px;
+}
+.result__item {
+  position: relative;
+}
+.icon--month {
+  width: 13px;
+  height: 13px;
+  fill:#1e1f26;
+  fill-rule:evenodd;
+  top: 7px;
+  right: 56px;   
+}
+.icon--grownups {
+  width: 7px;
+  height: 18px;
+  top: 2px;
+  right: 25px;   
+}
+.icon--children {
+  width: 6px;
+  height: 12px;
+  top: 8px;
+  right: 0px; 
+  fill:#1e1f26;
+  fill-rule:evenodd; 
+}

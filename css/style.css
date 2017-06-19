@@ -12,10 +12,16 @@
 }
 @font-face {
   font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_regular.eot');
+  font-weight: 600;
+  font-style: normal; 
+}
+/*@font-face {
+  font-family: "Proxima Nova Bold";
   src: url('../fonts/proxima_nova_bold.eot');
   font-weight: normal;
   font-style: normal; 
-}
+}*/
 
 @font-face {
   font-family: "Proxima Nova Light";
@@ -31,10 +37,16 @@
 }
 @font-face {
   font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal; 
+}
+/*@font-face {
+  font-family: "Proxima Nova Bold";
   src: url('../fonts/proxima_nova_bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal; 
-}
+}*/
 
 @font-face {
   font-family: "Proxima Nova Light";
@@ -50,10 +62,16 @@
 }
 @font-face {
   font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal; 
+}
+/*@font-face {
+  font-family: "Proxima Nova Bold";
   src: url('../fonts/proxima_nova_bold.woff') format('woff');
   font-weight: normal;
   font-style: normal; 
-}
+}*/
 
 @font-face {
   font-family: "Proxima Nova Light";
@@ -69,10 +87,17 @@
 }
 @font-face {
   font-family: "Proxima Nova Bold";
+  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal; 
+}
+/*@font-face {
+  font-family: "Proxima Nova Bold";
   src: url('../fonts/proxima_nova_bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal; 
-}
+}*/
+
 
 *,
 *::after,
@@ -163,9 +188,9 @@ a {
 .header-main__title {
   padding: 0;
   margin: 0;
+  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
   /*Размер должен быть по макету 28px*/
   font-size: 26px;
-  font-weight: 600;
   text-transform: uppercase;
 }
 .header-main__subtitle {
@@ -234,6 +259,9 @@ a {
 .form__wrap:nth-of-type(2) {
   margin-right: 42px;
 }
+.form__wrap:nth-of-type(5) {
+  margin-bottom: 30px;
+}
 .form__label {
   display: block;
   font-size: 14px;
@@ -281,6 +309,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 0;
 }
 .form__checkbox {
   display: none;
@@ -325,5 +354,29 @@ a {
   fill-rule:evenodd;
   top: 265px;
   left: 441px;  
+}
+.btn {
+  display: block;
+  box-sizing: border-box;
+  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  background-color: #db0536;
+  border-radius: 50px;
+  border: none;
+  transition: 100ms;
+  cursor: pointer;
+}
+.btn--form {
+  align-self: flex-start;
+  margin: 0 auto;
+  /*Размер по макету 18px*/
+  font-size: 16px;
+  padding: 20px 78px;
+}
+.btn--form:hover {
+  background-color: #ac0027;
 } 
- 
+.result {
+  width: 100%;
+} 

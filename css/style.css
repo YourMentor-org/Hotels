@@ -1,7 +1,13 @@
-@font-face {
+/*@font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_light.eot');
   font-weight: normal;
+  font-style: normal; 
+}*/
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_regular.eot');
+  font-weight: lighter;
   font-style: normal; 
 }
 @font-face {
@@ -23,10 +29,16 @@
   font-style: normal; 
 }*/
 
-@font-face {
+/*@font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_light.woff2') format('woff2');
   font-weight: normal;
+  font-style: normal; 
+}*/
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
+  font-weight: lighter;
   font-style: normal; 
 }
 @font-face {
@@ -46,12 +58,18 @@
   src: url('../fonts/proxima_nova_bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal; 
-}*/
+}
 
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_light.woff') format('woff');
   font-weight: normal;
+  font-style: normal; 
+}*/
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_regular.woff') format('woff');
+  font-weight: lighter;
   font-style: normal; 
 }
 @font-face {
@@ -71,12 +89,18 @@
   src: url('../fonts/proxima_nova_bold.woff') format('woff');
   font-weight: normal;
   font-style: normal; 
-}*/
+}
 
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_light.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal; 
+}*/
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
+  font-weight: lighter;
   font-style: normal; 
 }
 @font-face {
@@ -241,7 +265,6 @@ a {
 .icon {
   position: absolute;
   content: "";
-  cursor: pointer;
 }
 .icon--search { 
   width: 16px;
@@ -254,7 +277,11 @@ a {
   fill-rule: evenodd;
   top: 65px;
   right: 104px;
+  cursor: pointer;
  }
+.form__wrap {
+  position: relative;
+}
 .form__wrap:nth-of-type(1n) {
   margin-right: 10px;
   margin-bottom: 38px;
@@ -284,27 +311,147 @@ a {
   border: 1px solid #35363c;
   border-radius: 2px; 
 }
-.form__input--number {
-   width: 104px;
-   padding-left: 15px;
+
+/*временно через hover, исключительно для того, что бы визуально посмотреть*/
+.form__wrap--calendar:hover .form__table {
+  display: block;
 }
+
  .form__input::-webkit-input-placeholder {color: #db0536;}
  .form__input::-moz-placeholder {color: #db0536;}
  .form__input:-moz-placeholder  {color: #db0536;}
  .form__input:-ms-input-placeholder {color: #db0536;}
+ 
+ /*календарь*/
+.form__table {
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: 90px;
+  left: 0;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  z-index: 3;
+}
+.form__table::before {
+  position: absolute;
+  content: "";
+  border: 7px solid transparent;
+  border-bottom-color: #1e1f26;
+  top: -13px;
+  left: 143px;
+}
+.form__top {
+  background-color: #1e1f26;
+  border: solid 1px #1e1f26;
+}
+.form__caption {
+  width: 300px;
+  font-size: 18px;
+  line-height: 39px;
+  /*почему-то не подключается тонкий шрифт*/
+  font-weight: lighter;
+  text-align: center;
+  color: #ffffff;
+}
+.icon--left-arrow,
+.icon--right-arrow {
+  width: 11px;
+  height: 16px;
+  top: 14px;
+  left: 11px;
+  fill:#fff;
+  fill-rule:evenodd;
+  cursor: pointer;
+  z-index: 4; 
+}
+.icon--right-arrow {
+  left: 280px;
+}
+.form__cell-week {
+  padding-bottom: 4px;
+  /*Размер по макету 12px*/
+  font-size: 11px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.form__row {
+  border: solid 1px #adadad;
+}
+.form__cell {
+  padding: 7px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 28px;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  border: solid 1px #adadad;
+}
+.form__cell--active {
+  background-color: #db0536;
+  color: #ffffff;
+}
+.form__cell--light {
+  color: #adadad;
+}
+ /*-----------*/
+ /*временно через hover, исключительно для того, что бы визуально посмотреть*/
+.form__wrap--dropdown:hover .form__list {
+  display: block;
+}
+.form__input--number {
+  width: 104px;
+  padding-left: 15px;
+} 
 .icon--down-arrow1,
 .icon--down-arrow2 {
   width: 14px;
   height: 19px;
   fill:#35363c;
   fill-rule:evenodd;
-  top: 187px;
-  right: 309px;  
+  top: 52px;
+  right: 12px;
+  cursor: pointer;
  }
 .icon--down-arrow2 {
-  top: 187px;
-  right: 191px;    
+  top: 52px;
+  right: 12px;
 }
+
+/*выпадающий список*/
+.form__list {
+  display: none;
+  position: absolute;
+  width: 104px;
+  padding: 10px 0;
+  top: 90px;
+  left: 0;
+  background-color: #1e1f26;
+  z-index: 3;  
+}
+.form__list::before {
+  position: absolute;
+  content: "";
+  border: 7px solid transparent;
+  border-bottom-color: #1e1f26;
+  top: -13px;
+  left: 46px;
+}
+.form__item {
+  padding: 5px 0 5px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.form__item:hover {
+  background-color: #2d2e37;
+}
+/*----------------*/
+
 .form__wrap--checkbox {
   display: flex;
   justify-content: center;
@@ -352,8 +499,8 @@ a {
   height: 18px;
   fill:#a5a7b5;
   fill-rule:evenodd;
-  top: 265px;
-  left: 441px;  
+  top: 6px;
+  left: 345px;  
 }
 .btn {
   display: block;
@@ -401,6 +548,7 @@ a {
 }
 .result__item {
   position: relative;
+  display: block;
 }
 .icon--month {
   width: 13px;
@@ -408,13 +556,13 @@ a {
   fill:#1e1f26;
   fill-rule:evenodd;
   top: 7px;
-  right: 56px;   
+  right: 58px;   
 }
 .icon--grownups {
   width: 7px;
   height: 18px;
   top: 2px;
-  right: 25px;   
+  right: 27px;   
 }
 .icon--children {
   width: 6px;

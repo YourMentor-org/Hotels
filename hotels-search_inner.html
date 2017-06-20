@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>Гостиницы: расширенный поиск</title>
+    <script src="js/flexibility.js"></script>
   </head>
   <body class="page-inner">
     <svg style="display:none">
@@ -102,71 +103,71 @@
         <div class="form__wrap  form__wrap--calendar">
           <label class="form__label" for="date-out">Выберите дату отъезда</label>
           <input class="form__input" type="text" name="date-departure" id="date-out" placeholder="24 января, 2017">
-            <table class="form__table">
-              <tr class="form__top">
-                <th class="form__caption" colspan="7">
-                  <svg class="icon  icon--left-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#left-arrow"></use></svg>
-                  Январь
-                  <svg class="icon  icon--right-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#right-arrow"></use></svg>
-                </th>
-              </tr>
-              <tr class="form__top">
-                <td class="form__cell-week">пн</td>
-                <td class="form__cell-week">вт</td>
-                <td class="form__cell-week">ср</td>
-                <td class="form__cell-week">чт</td>
-                <td class="form__cell-week">пт</td>
-                <td class="form__cell-week">сб</td>
-                <td class="form__cell-week">вс</td>
-              </tr>
-              <tr class="form__row">
-                <td class="form__cell">1</td>
-                <td class="form__cell">2</td>
-                <td class="form__cell">3</td>
-                <td class="form__cell">4</td>
-                <td class="form__cell">5</td>
-                <td class="form__cell">6</td>
-                <td class="form__cell">7</td>
-              </tr>
-              <tr class="form__row">
-                <td class="form__cell">8</td>
-                <td class="form__cell">9</td>
-                <td class="form__cell">10</td>
-                <td class="form__cell">11</td>
-                <td class="form__cell">12</td>
-                <td class="form__cell">13</td>
-                <td class="form__cell">14</td>
-              </tr>
-              <tr class="form__row">
-                <td class="form__cell">15</td>
-                <td class="form__cell">16</td>
-                <td class="form__cell">17</td>
-                <td class="form__cell">18</td>
-                <td class="form__cell">19</td>
-                <td class="form__cell">20</td>
-                <td class="form__cell">21</td>
-              </tr>
-              <tr class="form__row">
-                <td class="form__cell">22</td>
-                <td class="form__cell">23</td>
-                <td class="form__cell">24</td>
-                <td class="form__cell  form__cell--active">25</td>
-                <td class="form__cell">26</td>
-                <td class="form__cell">27</td>
-                <td class="form__cell">28</td>
-              </tr>
-              <tr class="form__row">
-                <td class="form__cell">29</td>
-                <td class="form__cell">30</td>
-                <td class="form__cell">31</td>
-                <td class="form__cell  form__cell--light">1</td>
-                <td class="form__cell  form__cell--light">2</td>
-                <td class="form__cell  form__cell--light">3</td>
-                <td class="form__cell  form__cell--light">4</td>
-              </tr>
-            </table>
-          </div>
-          <div class="form__wrap  form__wrap--dropdown">
+          <table class="form__table">
+            <tr class="form__top">
+              <th class="form__caption" colspan="7">
+                <svg class="icon  icon--left-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#left-arrow"></use></svg>
+                Январь
+                <svg class="icon  icon--right-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#right-arrow"></use></svg>
+              </th>
+            </tr>
+            <tr class="form__top">
+              <td class="form__cell-week">пн</td>
+              <td class="form__cell-week">вт</td>
+              <td class="form__cell-week">ср</td>
+              <td class="form__cell-week">чт</td>
+              <td class="form__cell-week">пт</td>
+              <td class="form__cell-week">сб</td>
+              <td class="form__cell-week">вс</td>
+            </tr>
+            <tr class="form__row">
+              <td class="form__cell">1</td>
+              <td class="form__cell">2</td>
+              <td class="form__cell">3</td>
+              <td class="form__cell">4</td>
+              <td class="form__cell">5</td>
+              <td class="form__cell">6</td>
+              <td class="form__cell">7</td>
+            </tr>
+            <tr class="form__row">
+              <td class="form__cell">8</td>
+              <td class="form__cell">9</td>
+              <td class="form__cell">10</td>
+              <td class="form__cell">11</td>
+              <td class="form__cell">12</td>
+              <td class="form__cell">13</td>
+              <td class="form__cell">14</td>
+            </tr>
+            <tr class="form__row">
+              <td class="form__cell">15</td>
+              <td class="form__cell">16</td>
+              <td class="form__cell">17</td>
+              <td class="form__cell">18</td>
+              <td class="form__cell">19</td>
+              <td class="form__cell">20</td>
+              <td class="form__cell">21</td>
+            </tr>
+            <tr class="form__row">
+              <td class="form__cell">22</td>
+              <td class="form__cell">23</td>
+              <td class="form__cell">24</td>
+              <td class="form__cell  form__cell--active">25</td>
+              <td class="form__cell">26</td>
+              <td class="form__cell">27</td>
+              <td class="form__cell">28</td>
+            </tr>
+            <tr class="form__row">
+              <td class="form__cell">29</td>
+              <td class="form__cell">30</td>
+              <td class="form__cell">31</td>
+              <td class="form__cell  form__cell--light">1</td>
+              <td class="form__cell  form__cell--light">2</td>
+              <td class="form__cell  form__cell--light">3</td>
+              <td class="form__cell  form__cell--light">4</td>
+            </tr>
+          </table>  
+        </div>
+        <div class="form__wrap  form__wrap--dropdown">
           <svg class="icon  icon--down-arrow1" width="14" height="9"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#down-arrow"></use></svg>
           <label class="form__label" for="input-number1">Взрослых</label>
           <input class="form__input  form__input--number" type="text" name="input-number1" id="input-number1" placeholder="2">

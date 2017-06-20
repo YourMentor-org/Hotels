@@ -1,13 +1,7 @@
-/*@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_light.eot');
-  font-weight: normal;
-  font-style: normal; 
-}*/
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_regular.eot');
-  font-weight: lighter;
+  font-weight: 300;/*Тонкий шрифт не подключается, какое значение бы не писала*/
   font-style: normal; 
 }
 @font-face {
@@ -22,23 +16,10 @@
   font-weight: 600;
   font-style: normal; 
 }
-/*@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_bold.eot');
-  font-weight: normal;
-  font-style: normal; 
-}*/
-
-/*@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_light.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal; 
-}*/
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal; 
 }
 @font-face {
@@ -53,23 +34,10 @@
   font-weight: 600;
   font-style: normal; 
 }
-/*@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_bold.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal; 
-}
-
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal; 
-}*/
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_regular.woff') format('woff');
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal; 
 }
 @font-face {
@@ -84,23 +52,10 @@
   font-weight: 600;
   font-style: normal; 
 }
-/*@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal; 
-}
-
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal; 
-}*/
 @font-face {
   font-family: "Proxima Nova Light";
   src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal; 
 }
 @font-face {
@@ -115,13 +70,6 @@
   font-weight: 600;
   font-style: normal; 
 }
-/*@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal; 
-}*/
-
 
 *,
 *::after,
@@ -197,6 +145,7 @@ a {
   margin: 0 auto;
 }
 .header-main__slogan {
+  -js-display: flex;
   display: flex;
   justify-content: space-between;
   width: 686px;
@@ -205,6 +154,7 @@ a {
   margin-top: 2px;
 }
 .header-main__wrap {
+  -js-display: flex;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -225,8 +175,8 @@ a {
   font-size: 16px;
   font-weight: normal;
 }
-
 .form {
+  -js-display: flex;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -350,7 +300,7 @@ a {
   font-size: 18px;
   line-height: 39px;
   /*почему-то не подключается тонкий шрифт*/
-  font-weight: lighter;
+  font-weight: normal;
   text-align: center;
   color: #ffffff;
 }
@@ -453,6 +403,7 @@ a {
 /*----------------*/
 
 .form__wrap--checkbox {
+  -js-display: flex;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -528,11 +479,13 @@ a {
   width: 100%;
 }
 .form__wrap--result {
+  -js-display: flex;
   display: flex;
   justify-content: center;
   width: 100%;
 } 
 .result {
+  -js-display: flex;
   position: relative;
   display: flex;
   justify-content: space-between;

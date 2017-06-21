@@ -1,25 +1,7 @@
 @font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_regular.eot');
-  font-weight: 200;/*Тонкий шрифт не подключается, какое значение бы не писала*/
-  font-style: normal; 
-}
-@font-face {
   font-family: "Proxima Nova Regular";
   src: url('../fonts/proxima_nova_regular.eot');
   font-weight: normal;
-  font-style: normal; 
-}
-@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_regular.eot');
-  font-weight: 600;
-  font-style: normal; 
-}
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
-  font-weight: 200;
   font-style: normal; 
 }
 @font-face {
@@ -29,45 +11,15 @@
   font-style: normal; 
 }
 @font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal; 
-}
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_regular.woff') format('woff');
-  font-weight: 200;
-  font-style: normal; 
-}
-@font-face {
   font-family: "Proxima Nova Regular";
   src: url('../fonts/proxima_nova_regular.woff') format('woff');
   font-weight: normal;
   font-style: normal; 
 }
 @font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_regular.woff') format('woff');
-  font-weight: 600;
-  font-style: normal; 
-}
-@font-face {
-  font-family: "Proxima Nova Light";
-  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal; 
-}
-@font-face {
   font-family: "Proxima Nova Regular";
   src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal; 
-}
-@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
-  font-weight: 600;
   font-style: normal; 
 }
 
@@ -129,15 +81,14 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .container {
-  box-shadow: 0 0 0 3px green;
   max-width: 1148px;
   width: 65%;
   margin: 0 auto;
 }
 .header-main {
   position: relative;
-  padding-top: 51px;
-  padding-bottom: 106px;
+  padding-top: 50px;
+  padding-bottom: 105px;
   color: #ffffff;
   z-index: 1;
 }
@@ -171,40 +122,44 @@ a {
 .header-main__subtitle {
   padding: 0;
   margin: 0;
-  /*Размер должен быть по макету 16px*/
   font-size: 16px;
   font-weight: normal;
 }
 .form {
   -js-display: flex;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 1148px;
-  margin: 0 auto;
-  padding: 0 98px;
-  padding-top: 58px;
+  width: 100%;
+  padding: 0 99px; 
+  padding-top: 60px;
+  padding-bottom: 30px;
   background-color: #ffffff;
   border-radius: 5px;
-  z-index: 1;
+}
+
+.form__wrap--search {
+  -js-display: flex;
+  display: flex;
+  align-items: flex-start;
 }
 .form__search {
-  position: relative;
   display: block;
   box-sizing: border-box;
-  width: 954px;
-  padding: 7px 12px;
-  margin-bottom: 45px;
-  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
-  /*Размер по макету 16px*/
-  font-size: 14px;
+  width: 930px;
+  height: 31px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 16px; 
   color: #a5a7b5;
   border: none;
   outline: none;
   border-bottom: 1px solid #35363c;
   transition: 100ms;
+  margin-bottom: 46px;
 }
+
 .form__search:hover {
   border-bottom: 1px solid #a5a7b5;
 }
@@ -213,11 +168,14 @@ a {
 .form__search:-moz-placeholder  {color: #a5a7b5;}
 .form__search:-ms-input-placeholder {color: #a5a7b5;}
 
-.icon {
-  position: absolute;
-  content: "";
+.form__icon-search {
+  display: block;
+  padding-top: 3px;
+  width: 20px;
+  height: 31px;
+  border-bottom: 1px solid #35363c;
 }
-.icon--search { 
+.form__svg-search {
   width: 16px;
   height: 16px;
   fill: none; 
@@ -225,24 +183,23 @@ a {
   stroke-linecap: round; 
   stroke-linejoin: round; 
   stroke-width: 2px; 
-  fill-rule: evenodd;
-  top: 65px;
-  right: 104px;
-  cursor: pointer;
- }
+  cursor: pointer;  
+}
 .form__wrap {
   position: relative;
 }
-.form__wrap:nth-of-type(1n) {
-  margin-right: 10px;
+.form__wrap--grid {
+  width: 100%;
+  display: flex;
+}
+.form__wrap--indent-narrow {
+  margin-left: 10px;
   margin-bottom: 38px;
-}
-.form__wrap:nth-of-type(2) {
-  margin-right: 42px;
-}
-.form__wrap:nth-of-type(n+5) {
-  margin-bottom: 30px;
-}
+} 
+.form__wrap--indent-wide {
+  margin-left: 40px;
+} 
+
 .form__label {
   display: block;
   font-size: 14px;
@@ -253,12 +210,11 @@ a {
   display: block;
   box-sizing: border-box;
   width: 300px;
-  padding: 13px 14px;
-  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
-  /*Размер по макету 18px*/
+  padding: 13px 15px;
+  font-family: inherit;
+  font-weight: 600;
   font-size: 18px;
   color: #db0536;
-  font-weight: 600;
   border: 1px solid #35363c;
   border-radius: 2px; 
 }
@@ -268,10 +224,10 @@ a {
   display: block;
 }
 
- .form__input::-webkit-input-placeholder {color: #db0536;}
- .form__input::-moz-placeholder {color: #db0536;}
- .form__input:-moz-placeholder  {color: #db0536;}
- .form__input:-ms-input-placeholder {color: #db0536;}
+.form__input::-webkit-input-placeholder {color: #db0536;}
+.form__input::-moz-placeholder {color: #db0536;}
+.form__input:-moz-placeholder  {color: #db0536;}
+.form__input:-ms-input-placeholder {color: #db0536;} 
  
  /*календарь*/
 .form__table {
@@ -305,19 +261,27 @@ a {
   text-align: center;
   color: #ffffff;
 }
-.icon--left-arrow,
-.icon--right-arrow {
+.icon {
+  position: absolute;
+  content: "";
+}
+.icon--left-arrow {
   width: 11px;
   height: 16px;
   top: 14px;
   left: 11px;
   fill:#fff;
-  fill-rule:evenodd;
   cursor: pointer;
-  z-index: 4; 
+  z-index: 4;   
 }
 .icon--right-arrow {
+  width: 11px;
+  height: 16px;
+  top: 14px;
   left: 280px;
+  fill:#fff;
+  cursor: pointer;
+  z-index: 4; 
 }
 .form__cell-week {
   padding-bottom: 4px;
@@ -348,12 +312,13 @@ a {
   color: #adadad;
 }
  /*-----------*/
+
  /*временно через hover, исключительно для того, что бы визуально посмотреть*/
 .form__wrap--dropdown:hover .form__list {
   display: block;
 }
 .form__input--number {
-  width: 104px;
+  width: 105px;
   padding-left: 15px;
 } 
 .icon--down-arrow1,
@@ -361,15 +326,10 @@ a {
   width: 14px;
   height: 19px;
   fill:#35363c;
-  fill-rule:evenodd;
   top: 52px;
   right: 12px;
   cursor: pointer;
  }
-.icon--down-arrow2 {
-  top: 52px;
-  right: 12px;
-}
 
 /*выпадающий список*/
 .form__list {
@@ -408,7 +368,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 .form__checkbox {
   display: none;
@@ -417,8 +377,8 @@ a {
   box-sizing: border-box;
   display: block;
   position: relative;
-  width: 320px;
-  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
+  width: 328px;
+  font-family: inherit;
   /*Размер по макету 16px*/
   font-size: 15px; 
   color: #35363c;
@@ -450,19 +410,17 @@ a {
   width: 18px;
   height: 18px;
   fill:#a5a7b5;
-  fill-rule:evenodd;
   top: 6px;
-  left: 345px;  
+  left: 345px; 
 }
 .btn {
-  display: block;
   box-sizing: border-box;
-  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
-  text-align: center;
+  font-family: inherit;
   color: #ffffff;
   background-color: #db0536;
   border-radius: 50px;
   border: none;
+  outline: none;
   transition: 100ms;
   cursor: pointer;
 }
@@ -471,58 +429,51 @@ a {
   /*Размер по макету 18px*/
   font-size: 16px;
   padding: 20px 78px;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 .btn--form:hover {
   background-color: #ac0027;
 } 
 .result {
-  width: 100%;
-}
-.form__wrap--result {
   -js-display: flex;
   display: flex;
-  justify-content: center;
-  width: 100%;
-} 
-.result {
-  -js-display: flex;
+  box-sizing: border-box;
   position: relative;
-  display: flex;
-  justify-content: space-between;
   width: 200px;
-  padding: 0 10px;
-  /*Размер по макету 14px*/
   font-size: 14px;
   color: #1e1f26;
   margin: 0;
 }
-.result__item--indent {
-  padding-left: 7px;
-}
+
 .result__item {
+  display: inline-block;
   position: relative;
-  display: block;
+  width: 15px;
 }
+.result__item--large {
+  width: 110px;
+}
+.result__item--medium {
+  width: 36px;
+}
+
 .icon--month {
   width: 13px;
   height: 13px;
   fill:#1e1f26;
-  fill-rule:evenodd;
-  top: 7px;
-  right: 58px;   
+  top: 6px;
+  right: 10px;   
 }
 .icon--grownups {
   width: 7px;
   height: 18px;
   top: 2px;
-  right: 27px;   
+  right: 15px;   
 }
 .icon--children {
   width: 6px;
   height: 12px;
   top: 8px;
   right: 0px; 
-  fill:#1e1f26;
-  fill-rule:evenodd; 
+  fill:#1e1f26; 
 }

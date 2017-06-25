@@ -86,7 +86,7 @@ a {
 /*=== общая ===*/
 .container {
   max-width: 1148px;
-  width: 63.7%;
+  width: 100%;
 }
 /*=============*/
 .container--large {
@@ -202,14 +202,6 @@ a {
   outline: none;
   transition: 100ms;
 }
-/*=== общая ===*/
-
-.form__search::-webkit-input-placeholder {color: #a5a7b5;}
-.form__search::-moz-placeholder {color: #a5a7b5;}
-.form__search:-moz-placeholder  {color: #a5a7b5;}
-.form__search:-ms-input-placeholder {color: #a5a7b5;}
-/*=============*/
-
 /*=== общая ===*/
 .form__icon-search {
   display: inline-block;

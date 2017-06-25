@@ -29,9 +29,10 @@
       </header>
       <main>
         <form class="form  form--layout" action="/echo" method="post">
-          <div class="form__inner-search  form__inner-search--size">
+          <div class="form__inner-search  form__inner-search--size  form__inner-search--active">
             <label class="visually-hidden" for="form-search">Направление, город, название отеля: например, Париж, Милан</label>
-            <input class="form__search  form__search--indent"  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан" placeholder="Направление, город, название отеля: например, Париж, Милан">
+            <input class="form__search
+            "  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан" placeholder="Направление, город, название отеля: например, Париж, Милан">
             <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
           <div class="form__wrap">
@@ -187,7 +188,7 @@
                 <svg class="icon  icon--down-arrow2" width="14" height="9"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#down-arrow"></use></svg>
               </span>
               <label class="form__label" for="input-number2">Детей</label>
-              <input class="form__input  form__input--select" type="text" name="input-number2" id="input-number2" value="2" placeholder="1">
+              <input class="form__input  form__input--select" type="text" name="input-number2" id="input-number2" value="1" placeholder="1">
               <ul class="form__list">
                 <li class="form__item">1</li>
                 <li class="form__item">2</li>
@@ -219,9 +220,9 @@
         </form>
       </main>
     </div>
-    <script src="js/flexibility.js"></script>
+    <!-- <script src="js/flexibility.js"></script>
     <script>
       flexibility(document.documentElement);
-    </script>
+    </script>-->
   </body>
 </html>

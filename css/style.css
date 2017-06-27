@@ -765,3 +765,23 @@ a {
 .btn--info:active {
   color: #db0536;;
 }
+.address {
+  padding: 35px 0 40px;
+}
+.address__title {
+  padding: 0;
+  margin: 0;
+  padding-left: 3px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1e1f26;
+  margin-bottom: 15px
+}
+.address__list {
+  color: #1e1f26;
+}
+.address__item {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}

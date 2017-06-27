@@ -103,6 +103,11 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.container--center {
+  -js-display: flex;
+  display: flex;
+  justify-content: center;
+}
 .header-main {
   width: 100%;
   position: relative;
@@ -592,7 +597,8 @@ a {
 }
 /*Palmira*/
 .description {
-  display: inline-flex;
+  -js-display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 1148px;
@@ -600,6 +606,7 @@ a {
   padding-top: 55px;
 }
 .description__header {
+  -js-display: flex;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -651,12 +658,14 @@ a {
   color: #a5a7b5;
 }
 .description__wrap {
+  -js-display: flex;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
 .description__container {
+  -js-display: flex;
   display: flex;
   flex-wrap: wrap;
   width: 32.24%;
@@ -665,6 +674,7 @@ a {
   padding: 21px;
 }
 .description__title {
+  -js-display: flex;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -685,17 +695,15 @@ a {
   color: #1e1f26;
 }
 .description__list {
-  padding-left: 5px;
   margin: 0;
   color: #1e1f26;
-  padding-bottom: 7px;
+  padding: 0 0 7px 5px;
 }
 .description__item {
   position: relative;
   font-size: 1.4rem;
   line-height: 1.2;
-  padding-left: 7px;
-  padding-bottom: 3px;
+  padding: 0 0 3px 7px;
 }
 .description__item::before {
   position: absolute;
@@ -784,4 +792,22 @@ a {
 .address__item {
   font-size: 1.5rem;
   line-height: 1.3;
+}
+.map {
+  width: 100%;
+  min-height: 260px;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: top center;
+}
+.map--indent {
+  margin-bottom: 50px;
+}
+.btn--book {
+  width: 255px;
+  padding: 20px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 70px;
 }

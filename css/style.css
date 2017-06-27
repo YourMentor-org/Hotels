@@ -590,3 +590,120 @@ a {
   right: 0; 
   fill: #ffffff;
 }
+/*Palmira*/
+.description {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1148px;
+  width: 100%;
+  padding-top: 55px;
+}
+.description__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 31.4%;
+  padding-bottom: 55px;
+}
+.description__title-header {
+  padding: 0;
+  margin: 0;
+  font-size: 2.7rem;
+  line-height: 1.3;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.description__subtitle {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: #1e1f26;
+  margin-bottom: 30px;
+}
+.rating {
+  -js-display: flex;
+  display: flex;
+  justify-content: flex-end;
+  width: 70px;
+  padding: 6px 0;
+}
+.rating__item {
+  width: 14px;
+  height: 11px;
+}
+.rating--size {
+  width: 60px;
+  justify-content: space-between;
+}
+.rating__star {
+  width: 11px;
+  height: 11px;
+  fill: #fdb913;
+  cursor: pointer; 
+}
+.description__text {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #a5a7b5;
+}
+.description__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.description__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 32.24%;
+  border: 1px solid #35363c;
+  border-radius: 2px;
+  padding: 21px;
+}
+.description__title {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding-bottom: 19px;
+  color: #db0536;
+}
+.description__price {
+  display: inline-block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #1e1f26;
+}
+.description__list {
+  padding-left: 5px;
+  margin: 0;
+  color: #1e1f26;
+  padding-bottom: 7px;
+}
+.description__item {
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding-left: 7px;
+  padding-bottom: 3px;
+}
+.description__item::before {
+  position: absolute;
+  content: "";
+  top: 6px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #1e1f26;
+}

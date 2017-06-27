@@ -61,11 +61,15 @@ a {
   position: absolute;
 }
 .page {
+  -js-display: flex;
   width: 100%;
   display: flex;
 	min-height: 100vh;
 }
-/*=============*/
+.page--layout {
+  -js-display: flex;
+  flex-direction: column;
+}
 .page--background {
   position: relative;
   background-color: #ffffff;
@@ -83,50 +87,67 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/*=== общая ===*/
 .container {
   max-width: 1148px;
   width: 100%;
+  margin: 0 auto;
 }
-/*=============*/
 .container--large {
   -js-display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
 }
-/*=== общая ===*/
+.container--layout {
+  -js-display: flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .header-main {
   width: 100%;
   position: relative;
   color: #ffffff;
   z-index: 1;
 }
-/*=============*/
 .header-main--indent {
   max-width: 1148px;
   margin: 0 auto;
   padding: 45px 0 115px;
-  
 }
-/*=== общая ===*/
+.header-main--pseudo {
+  background-image: url("../img/background-header.jpg");
+  background-repeat: no-repeat; /*картинка повторяться не будет*/
+  background-size: cover; /* от края до края*/
+  background-position: top center;
+  padding: 45px 0 85px;
+}
+.header-main--pseudo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .header-main__slogan {
   -js-display: flex;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;/*для IE10*/
+  position: relative;
   width: 60%;
   z-index: 1;
 }
-/*=============*/
 .header-main__slogan--indent {
   margin-top: 3px;
 }
 .header-main__logo {
   margin-top: 5px;
 }
-/*=== общая ===*/
+.header-main__logo--indent {
+  margin: 8px 0 3px;
+}
 .header-main__inner {
   -js-display: flex;
   display: flex;
@@ -134,32 +155,23 @@ a {
   align-items: flex-start;
   width: 85.9%;
 }
-/*=============*/
-/*=== общая ===*/
 .header-main__title {
   margin: 0;
-  /*Размер должен быть по макету 28px*/
   font-size: 2.6rem;
   line-height: 1.5;
   text-transform: uppercase;
 }
-/*=============*/
-/*=== общая ===*/
 .header-main__subtitle {
   margin: 0;
   font-size: 1.6rem;
   line-height: 1.2;
 }
-/*=============*/
-/*=== общая ===*/
 .form {
   position: relative;
   max-width: 1148px;
   width: 100%;
   background-color: #ffffff;
 }
-
-/*=============*/
 .form--layout {
   -js-display: flex;
   display: flex;
@@ -170,14 +182,12 @@ a {
   margin-bottom: 207px;
   margin: 0 auto;
 }
-/*=== общая ===*/
 .form__inner-search {
   -js-display: flex;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
-/*=============*/
 .form__inner-search--size {
   width: 82.75%;
   margin-bottom: 52px;  
@@ -188,7 +198,6 @@ a {
 .form__inner-search--active:hover {
   border-bottom: 1px solid #35363c;
 }
-/*=== общая ===*/
 .form__search {
   box-sizing: border-box;
   width: 97.7%;
@@ -202,7 +211,6 @@ a {
   outline: none;
   transition: 100ms;
 }
-/*=== общая ===*/
 .form__icon-search {
   display: inline-block;
   width: 21px;
@@ -210,8 +218,6 @@ a {
   padding-top: 7px;
   background-color: transparent;
 }
-/*=============*/
-/*=== общая ===*/
 .form__svg-search {
   width: 16px;
   height: 16px;
@@ -222,7 +228,6 @@ a {
   stroke-width: 2px; 
   cursor: pointer;  
 }
-/*=============*/
 .form__wrap {
   -js-display: flex;
   display: flex;
@@ -265,7 +270,6 @@ a {
 .form__field--calendar:hover .form__table {
   display: block;
 }
-
 .form__input::-webkit-input-placeholder {color: #db0536;}
 .form__input::-moz-placeholder {color: #db0536; opacity: 1;}
 .form__input:-moz-placeholder  {color: #db0536; opacity: 1;}
@@ -298,7 +302,6 @@ a {
   width: 300px;
   font-size: 18px;
   line-height: 39px;
-  /*почему-то не подключается тонкий шрифт*/
   font-weight: normal;
   text-align: center;
   color: #ffffff;
@@ -327,7 +330,6 @@ a {
 }
 .form__cell-week {
   padding-bottom: 4px;
-  /*Размер по макету 12px*/
   font-size: 11px;
   line-height: 24px;
   text-align: center;
@@ -353,7 +355,6 @@ a {
 .form__cell--light {
   color: #adadad;
 }
- /*-----------*/
 .form__select--dropdown:hover .form__list {
   display: block;
 }
@@ -364,7 +365,6 @@ a {
 .form__select--indent {
   margin-left: 42px;
   margin-right: 10px;
-  
 }
 .form__input--select {
   width: 105px;
@@ -387,7 +387,6 @@ a {
   left: 0;
   cursor: pointer;
  }
-
 /*выпадающий список*/
 .form__list {
   display: none;
@@ -418,7 +417,6 @@ a {
 .form__item:hover {
   background-color: #2d2e37;
 }
-/*----------------*/
 .form__checkbox {
   display: none;
 }
@@ -427,7 +425,6 @@ a {
   display: inline-block;
   padding-top: 5px;
   padding-left: 57px;
-  /*Размер по макету 16px*/
   font-size: 1.5rem;
   line-height: 1.2;
   color: #35363c;
@@ -495,7 +492,6 @@ a {
   background-color: #ffffff;
 }
 .btn--form {
-  /*Размер по макету 18px*/
   font-size: 1.6rem;
   line-height: 1.3;
   word-wrap: normal;
@@ -504,8 +500,12 @@ a {
   height: 60px;
   margin-bottom: 37px;
 }
-
-/*=== общая ===*/
+.btn--result {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  width: 97px;
+  height: 30px;
+}
 .result {
   padding-top: 4px;
   font-size: 1.4rem;
@@ -518,21 +518,27 @@ a {
   width: 22%;
   color: #1e1f26;
 }
-/*=============*/
+.result--light {
+  width: 17.1%;
+  min-width: 200px;
+  position: relative;
+  z-index: 1;
+}
 .result__row {
   -js-display: flex;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 4px;
 }
-/*=== общая ===*/
+.result__row--indent {
+  padding-top: 5px;
+  margin-bottom: 6px;
+}
 .result__col {
   display: inline-block;
   position: relative;
   box-sizing: border-box;
 }
-/*=============*/
-/*=== общая ===*/
 .result__col--large {
   width: 107px;
 }
@@ -542,8 +548,6 @@ a {
 .result__col--small {
   width: 15px;
 }
-/*=============*/
-
 .icon--month {
   width: 13px;
   height: 13px;
@@ -564,4 +568,25 @@ a {
   top: 3px;
   right: 0; 
   fill: #1e1f26;
+}
+.icon--month-light {
+  width: 13px;
+  height: 13px;
+  top: 2px;
+  right: 10px; 
+  fill: #ffffff;
+}
+.icon--grownups-light {
+  width: 7px;
+  height: 18px;
+  top: -3px;
+  right: 15px;
+  fill: #ffffff;
+}
+.icon--children-light {
+  width: 6px;
+  height: 12px;
+  top: 3px;
+  right: 0; 
+  fill: #ffffff;
 }

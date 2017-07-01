@@ -1,1 +1,1 @@
-Hotel Project
+Hotels

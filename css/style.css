@@ -1,165 +1,176 @@
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url('../fonts/proxima_nova_regular.eot');
-  font-weight: normal;
-  font-style: normal; 
+ font-family: "Proxima Nova Regular";
+ src: url('../fonts/proxima_nova_regular.eot');
+ font-weight: normal;
+ font-style: normal; 
 }
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal; 
+ font-family: "Proxima Nova Regular";
+ src: url('../fonts/proxima_nova_regular.woff2') format('woff2');
+ font-weight: normal;
+ font-style: normal; 
 }
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url('../fonts/proxima_nova_regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal; 
+ font-family: "Proxima Nova Regular";
+ src: url('../fonts/proxima_nova_regular.woff') format('woff');
+ font-weight: normal;
+ font-style: normal; 
 }
 @font-face {
-  font-family: "Proxima Nova Regular";
-  src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal; 
+ font-family: "Proxima Nova Regular";
+ src: url('../fonts/proxima_nova_regular.ttf') format('truetype');
+ font-weight: normal;
+ font-style: normal; 
 }
 :root {
-  font-size: 62.5%;
-  font-family: "Proxima Nova Regular", Tahoma, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #000000;
+ font-size: 62.5%;
+ font-family: "Proxima Nova Regular", Tahoma, sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ color: #1e1f26 ;
 }
 /*=== общая ===*/
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 html, 
 body {
-  padding: 0;
-  margin: 0;
-  font-size: 1.4rem;
+ padding: 0;
+ margin: 0;
 }
 ul, 
 li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+ list-style: none;
 }
 a {
-  text-decoration: none;
+ text-decoration: none;
 }
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  margin:-1px;
-  padding:0;
-  position: absolute;
+ clip: rect(0 0 0 0);
+ overflow: hidden;
+ width: 1px;
+ height: 1px;
+ border: 0;
+ margin:-1px;
+ padding:0;
+ position: absolute;
 }
 .page {
-  width: 100%;
-  display: flex;
-	min-height: 100vh;
+ -js-display: flex;
+ width: 100%;
+ display: flex;
+    min-height: 100vh;
 }
-/*=============*/
+.page--column {
+ -js-display: flex;
+ flex-direction: column;
+}
 .page--background {
-  position: relative;
-  background-color: #ffffff;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+ position: relative;
+ background-color: #ffffff ;
+ background-image: url("../img/background.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: top center;
 }
 .page--background::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+ position: absolute;
+ content: "";
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0, 0, 0, 0.5);
 }
-/*=== общая ===*/
 .container {
-  max-width: 1148px;
-  width: 100%;
+ max-width: 1148px;
+ min-width: 878px;
+ width: 100%;
+ margin: 0 auto;
 }
-/*=============*/
-.container--large {
-  -js-display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
+.container--column {
+ -js-display: flex;
+ flex-direction: column;
+ align-items: center;
 }
-/*=== общая ===*/
+.container--between {
+ -js-display: flex;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+.container--center {
+ -js-display: flex;
+ display: flex;
+ justify-content: center;
+ padding-bottom: 70px;
+}
 .header-main {
-  width: 100%;
-  position: relative;
-  color: #ffffff;
-  z-index: 1;
+ width: 100%;
+ position: relative;
+ color: #ffffff ;
+ z-index: 1;
 }
-/*=============*/
-.header-main--indent {
-  max-width: 1148px;
-  margin: 0 auto;
-  padding: 45px 0 115px;
-  
+.header-main--size {
+ max-width: 1148px;
+ margin: 0 auto;
+ padding: 45px 0 110px;
 }
-/*=== общая ===*/
+.header-main--pseudo {
+ background-image: url("../img/background-header.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: top center;
+ padding: 45px 0 85px;
+}
+.header-main--pseudo::before {
+ position: absolute;
+ content: "";
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0, 0, 0, 0.5);
+}
 .header-main__slogan {
-  -js-display: flex;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;/*для IE10*/
-  width: 60%;
-  z-index: 1;
-}
-/*=============*/
-.header-main__slogan--indent {
-  margin-top: 3px;
+ -js-display: flex;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ position: relative;
+ width: 60%;
+ min-width: 680px;
 }
 .header-main__logo {
-  margin-top: 5px;
+ margin: 8px 0;
 }
-/*=== общая ===*/
 .header-main__inner {
-  -js-display: flex;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 85.9%;
+ -js-display: flex;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ width: 85.9%;
 }
-/*=============*/
-/*=== общая ===*/
 .header-main__title {
-  margin: 0;
-  /*Размер должен быть по макету 28px*/
-  font-size: 2.6rem;
-  line-height: 1.5;
-  text-transform: uppercase;
+ margin: 0;
+ font-size: 2.6rem;
+ line-height: 1.5;
+ text-transform: uppercase;
 }
-/*=============*/
-/*=== общая ===*/
 .header-main__subtitle {
-  margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.2;
+ margin: 0;
+ font-size: 1.6rem;
+ line-height: 1.5;
 }
-/*=============*/
-/*=== общая ===*/
+
 .form {
   position: relative;
   max-width: 1148px;
   width: 100%;
   background-color: #ffffff;
 }
-
-/*=============*/
 .form--layout {
   -js-display: flex;
   display: flex;

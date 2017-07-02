@@ -17,25 +17,25 @@
       <symbol id="left-arrow" viewbox="0 0 10.906 16"><path d="M7.945-.01L0 7.99l7.945 8 2.96-2.95-5.02-5.05 5.02-5.06z"/></symbol>
       <symbol id="right-arrow" viewbox="0 0 10.91 16"><path d="M2.96-.01l7.95 8-7.95 8L0 13.04l5.02-5.05L0 2.93z"/></symbol>  
       </svg>
-    <div class="container  container--large">
-      <header class="header-main  header-main--indent">
-        <div class="header-main__slogan  header-main__slogan--indent">
+    <div class="container  container--column">
+      <header class="header-main  header-main--size">
+        <div class="header-main__slogan">
           <a class="header-main__logo" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
           <div class="header-main__inner">
             <h1 class="header-main__title">Гостиницы по лучшим ценам</h1>
-            <p class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</p>
+            <h2 class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
           </div>
         </div>
       </header>
       <main>
-        <form class="form  form--layout" action="/echo" method="post">
+         <form class="form  form--layout" action="/echo" method="post">
           <div class="form__inner-search  form__inner-search--size  form__inner-search--active">
             <label class="visually-hidden" for="form-search">Направление, город, название отеля: например, Париж, Милан</label>
             <input class="form__search
             "  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан">
             <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
-          <div class="form__wrap">
+          <div class="form__wrap  form__wrap--row">
             <div class="form__field   form__field--calendar">
               <label class="form__label" for="date-in">Выберите дату вселения</label>
               <input class="form__input" type="text" name="arrival-date" id="date-in" value="23 января, 2017" placeholder="23 января, 2017">
@@ -204,7 +204,7 @@
           </div>
           <div class="result  result--dark">
             <button class="btn  btn--form" type="submit">Начать поиск</button>
-            <div class="result__row">
+            <div class="result__row  result__row--dark">
               <span class="result__col  result__col--large">23&ndash;25 января</span>
               <span class="result__col  result__col--medium">3
                 <svg class="icon  icon--month" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>

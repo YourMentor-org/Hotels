@@ -120,8 +120,8 @@ a {
 }
 .header-main--pseudo {
   background-image: url("../img/background-header.jpg");
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: top center;
   padding: 45px 0 85px;
 }
@@ -228,14 +228,14 @@ a {
   width: 6px;
   height: 12px;
   top: 3px;
-  right: 0; 
+  right: 0;
   fill: #1e1f26;
 }
 .icon--month-light {
   width: 13px;
   height: 13px;
   top: 2px;
-  right: 10px; 
+  right: 10px;
   fill: #ffffff;
 }
 .icon--grownups-light {
@@ -249,7 +249,7 @@ a {
   width: 6px;
   height: 12px;
   top: 3px;
-  right: 0; 
+  right: 0;
   fill: #ffffff;
 }
 .icon--left-arrow {
@@ -259,7 +259,7 @@ a {
   left: 11px;
   fill:#fff;
   cursor: pointer;
-  z-index: 4;   
+  z-index: 4;
 }
 .icon--right-arrow {
   width: 11px;
@@ -268,7 +268,7 @@ a {
   left: 280px;
   fill:#fff;
   cursor: pointer;
-  z-index: 4; 
+  z-index: 4;
 }
 .icon--down-arrow1,
 .icon--down-arrow2 {
@@ -283,7 +283,7 @@ a {
   width: 18px;
   height: 18px;
   top: 6px;
-  left: 35px; 
+  left: 35px;
   fill: #a5a7b5;
 }
 .btn {
@@ -366,7 +366,7 @@ a {
   width: 11px;
   height: 11px;
   fill: #fdb913;
-  cursor: pointer; 
+  cursor: pointer;
 }
 .form {
   position: relative;
@@ -393,7 +393,7 @@ a {
 }
 .form__inner-search--size {
   width: 82.75%;
-  margin-bottom: 50px;  
+  margin-bottom: 50px;
 }
 .form__inner-search--active {
   border-bottom: 1px solid #a5a7b5;
@@ -469,7 +469,7 @@ a {
   line-height: 1.3;
   color: #db0536;
   border: 1px solid #35363c;
-  border-radius: 2px; 
+  border-radius: 2px;
 }
 .form__field--calendar:hover .form__table {
   display: block;
@@ -477,8 +477,8 @@ a {
 .form__input::-webkit-input-placeholder {color: #db0536;}
 .form__input::-moz-placeholder {color: #db0536; opacity: 1;}
 .form__input:-moz-placeholder  {color: #db0536; opacity: 1;}
-.form__input:-ms-input-placeholder {color: #db0536;} 
- 
+.form__input:-ms-input-placeholder {color: #db0536;}
+
  /*календарь*/
 .form__table {
   display: none;
@@ -712,7 +712,7 @@ a {
   font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 600;
-  color: #1e1f26; /*родительский блок .description__title*/ 
+  color: #1e1f26; /*родительский блок .description__title*/
 }
 .description__list {
   margin: 0;
@@ -797,8 +797,8 @@ a {
   width: 100%;
   min-height: 260px;
   background-image: url("../img/map.jpg");
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: top center;
 }
 .map--indent {

@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin');
 
 gulp.task('scripts', function () {  
-    gulp.src('js/main.js')
+    gulp.src('js/flexibility.js')
         .pipe(uglify())
         .pipe(gulp.dest('build/js'));
         

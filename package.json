@@ -22,5 +22,8 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-svg2png": "^2.0.2",
     "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-svgmin": "^1.2.4"
   }
 }

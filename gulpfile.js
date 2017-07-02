@@ -17,13 +17,13 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('default', () =>
+gulp.task('image', () =>
 	gulp.src('img/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('build/img'))
 );
-// Можно ли так поставить задачу, что бы одновременно картинки из корневой папки img минифицировлись и складывались в build/img, а иконки из img/icons, соответственно в build/img/icons? Или только делить на две задачи, как у меня?
-gulp.task('image', () =>
+// Можно ли так поставить одну задачу, что бы одновременно картинки из корневой папки img минифицировлись и складывались в build/img, а иконки из img/icons, соответственно в build/img/icons? Или только делить на две задачи, как у меня?
+gulp.task('icons', () =>
 	gulp.src('img/icons/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('build/img/icons'))

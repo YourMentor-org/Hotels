@@ -1,1 +1,1 @@
-Gulp Project
+Gulp

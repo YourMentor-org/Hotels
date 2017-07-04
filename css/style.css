@@ -123,7 +123,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  padding: 45px 0 85px;
+  padding: 50px 0 80px;
 }
 .header-main--pseudo::before {
   position: absolute;
@@ -155,14 +155,15 @@ a {
 }
 .header-main__title {
   margin: 0;
-  font-size: 2.6rem;
+  font-size: 2.7rem;
   line-height: 1.5;
   text-transform: uppercase;
 }
 .header-main__subtitle {
-  margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.5;
+ margin: 0;
+ font-size: 1.6rem;
+ line-height: 1.3;
+ font-weight: 300;
 }
 .result {
   padding-top: 4px;
@@ -189,7 +190,6 @@ a {
   min-width: 194px;
 }
 .result__row--light-indent {
-  padding-top: 5px;
   margin-bottom: 6px;
 }
 .result__col {
@@ -345,6 +345,17 @@ a {
   background-color: #db0536;
   border: 1px solid #db0536;
 }
+.btn--catalog {
+  display: none;
+  position: absolute;
+  padding: 10px 43px;
+  font-size: 1.6rem;
+  top: 41%;
+  left: 28%;
+  color: #ffffff;
+  background-color: #db0536;
+  border: 1px solid #db0536;
+}
 .rating {
   -js-display: flex;
   display: flex;
@@ -385,6 +396,11 @@ a {
   margin-bottom: 207px;
   margin: 0 auto;
 }
+.form--size {
+ display: flex;
+ justify-content: center;
+ padding: 40px 0 75px 0;
+}
 .form__inner-search {
   -js-display: flex;
   display: flex;
@@ -400,6 +416,9 @@ a {
 }
 .form__inner-search--active:hover {
   border-bottom: 1px solid #35363c;
+}
+.form__inner-search--narrow {
+ width: 65.5%;
 }
 .form__search {
   box-sizing: border-box;
@@ -561,7 +580,6 @@ a {
   right: 14px;
   bottom: 24px;
 }
-/*выпадающий список*/
 .form__list {
   display: none;
   position: absolute;
@@ -683,6 +701,7 @@ a {
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%; /*Для IE, почему-то расползается на весь экран, помогло только это*/
+  min-width: 858px;
 }
 .description__container {
   -js-display: flex;
@@ -803,4 +822,77 @@ a {
 }
 .map--indent {
   margin-bottom: 50px;
+}
+.catalog {
+  -js-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catalog--indent-top {
+  margin-top: 3px;
+}
+.catalog__item {
+  position: relative;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.catalog__item:hover .btn--catalog {
+  display: block;
+}
+.catalog__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(32, 33, 40, 1) 0, transparent 100px);
+}
+.catalog__image {
+  display: block;
+  width: 374px;
+  height: 237px;
+  overflow: hidden;
+}
+.catalog__features {
+  -js-display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  padding: 18px 16px 12px 16px;
+  left: 0;
+  bottom: 0px;
+}
+.catalog__inner {
+  -js-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog__inner--left {
+  width: 60%;
+}
+.catalog__inner--right {
+  justify-content: flex-end;
+  width: 30%;
+}
+.catalog__title {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.catalog__text {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;  
+}
+.catalog__price {
+  word-wrap: normal;
+  font-size: 1.7rem;
+  line-height: 1.5;
 }

@@ -20,22 +20,22 @@
     <div class="container  container--column">
       <header class="header-main  header-main--size">
         <div class="header-main__slogan">
-          <a class="header-main__logo" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
+          <a class="header-main__logo  header-main__logo--indent" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
           <div class="header-main__inner">
-            <h1 class="header-main__title">Гостиницы по лучшим ценам</h1>
+            <h1 class="header-main__title">Гостиницы <br>по лучшим ценам</h1>
             <h2 class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
           </div>
         </div>
       </header>
       <main>
-         <form class="form  form--layout" action="/echo" method="post">
-          <div class="form__inner-search  form__inner-search--size  form__inner-search--active">
+        <form class="form  form--layout" action="/echo" method="post">
+          <div class="form__inner-search  form__inner-search--size  form__inner-search--active  mobili-none">
             <label class="visually-hidden" for="form-search">Направление, город, название отеля: например, Париж, Милан</label>
             <input class="form__search
             "  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан">
             <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
-          <div class="form__wrap  form__wrap--row">
+          <div class="form__wrap  form__wrap--row  mobili-none">
             <div class="form__field   form__field--calendar">
               <label class="form__label" for="date-in">Выберите дату вселения</label>
               <input class="form__input" type="text" name="arrival-date" id="date-in" value="23 января, 2017" placeholder="23 января, 2017">
@@ -197,14 +197,19 @@
               </ul>
             </div>
           </div>
-          <div class="form__wrap  form__wrap--checkbox">
+          <div class="form__wrap  form__wrap--checkbox  mobili-none">
             <input class="form__checkbox" type="checkbox" name="discount" id="discount">
             <label class="form__label-checkbox" for="discount">Добавить перелет и получить скидку</label>
             <svg class="icon  icon--plane" width="17" height="17"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#plane"></use></svg>
           </div>
           <div class="result  result--dark">
+            <div class="slader">
+              <span class="slider__control  slider__control--active"></span>
+              <span class="slider__control"></span>
+              <span class="slider__control"></span>
+            </div>
             <button class="btn  btn--form" type="submit">Начать поиск</button>
-            <div class="result__row  result__row--dark">
+            <div class="result__row  result__row--dark  mobili-none">
               <span class="result__col  result__col--large">23&ndash;25 января</span>
               <span class="result__col  result__col--medium">3
                 <svg class="icon  icon--month" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>

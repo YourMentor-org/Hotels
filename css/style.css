@@ -903,6 +903,16 @@ a {
   .page--background {
     background-image: url("../img/background_mobile.jpg");
   }
+  .page--light {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/fill_mobile.jpg");
+    position: relative;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;  
+  }
   .container {
     min-width: 320px;
   }
@@ -912,6 +922,11 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 50px 0 35px;
+  }
+  .header-main--light {
+    display: flex;
+    padding: 0 47px 0 30px;
+    background-color:  rgba(255, 255, 255, 0.1);
   }
   .header-main__slogan {
     flex-direction: column;
@@ -927,11 +942,34 @@ a {
     align-items: center;
     width: 100%;
   }
+  .header-main__arrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color:  rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+  }
+  .icon--arrow-mobile {
+    width: 13px;
+    height: 20px;
+    top: 14px;
+    left: 16px;
+    fill:#fff;
+    cursor: pointer;
+  }
   .header-main__title {
     text-align: center;
     font-size: 2.2rem;
     line-height: 1.4;
     margin-bottom: 5px;
+  }
+  .header-main__title--small {
+    padding: 15px 20px 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: none;
+    margin-right: auto;
   }
   .header-main__subtitle {
     max-width: 260px;
@@ -946,6 +984,37 @@ a {
     padding: 0;
     border-radius: 0;
     margin-bottom: 0;
+  }
+  .form--size-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .form__inner-search--mobile {
+    width: 71%;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+  }
+  .form__search {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .form__svg-search {
+    stroke: #ffffff;
+  }
+  .btn--form-mobile-search {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  .btn--form-mobile-search:hover {
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.4);
   }
   .result {
     padding-top: 0;

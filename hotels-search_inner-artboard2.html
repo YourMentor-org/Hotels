@@ -10,19 +10,22 @@
     <svg style="display:none">
       <symbol id="arrow-mobile" viewbox="0 0 13 20"><path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M1765.98 497.811l-7.31 7.189 7.31 7.189-2.82 2.8-7.32-7.189-2.83-2.8 2.83-2.8 7.32-7.189z" transform="translate(-1753 -495)"/></symbol>
       <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
-      </svg>
+    </svg>
+    <div class="container  container--column">  
       <header class="header-main  header-main--light">
-        <button class="header-main__arrow" type="button">
-          <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
-        </button>
-        <h2 class="header-main__title  header-main__title--small">Выберите место</h2>
-        <a class="header-main__logo  header-main__logo--mobile" href="#">
-          <picture><img src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></picture>
-        </a>  
+        <div class="header-main__wrap">
+          <button class="header-main__arrow" type="button">
+            <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
+          </button>
+          <h2 class="header-main__title  header-main__title--small">Выберите место</h2>
+          <a class="header-main__logo  header-main__logo--mobile" href="#">
+            <picture><img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></picture>
+          </a>
+        </div>  
       </header>
       <main>
         <form class="form  form--size-mobile" action="/echo" method="post">
-          <div class="form__inner-search  form__inner-search--mobile  form__inner-search--mobile">
+          <div class="form__inner-search  form__inner-search--mobile">
             <label class="visually-hidden" for="form-search">В каком городе?</label>
             <input class="form__search
             "  type="search" name="search" id="form-search" value="В каком городе?">
@@ -30,7 +33,7 @@
           </div>
           <button class="btn btn--form-mobile-search" type="button">Свое местоположение</button>
         </form>
-      </main>
-    
+      </main>  
+    </div>
   </body>
 </html>

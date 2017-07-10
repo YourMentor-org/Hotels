@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     svg2png = require('gulp-svg2png'),
-    svgmin = require('gulp-svgmin');
+    svgmin = require('gulp-svgmin'),
+    pug = require('gulp-pug');
 
 gulp.task('scripts', function () {  
     gulp.src('js/flexibility.js')
@@ -22,12 +23,6 @@ gulp.task('image', () =>
 		.pipe(imagemin())
 		.pipe(gulp.dest('build/img'))
 );
-gulp.task('icons', () =>
-	gulp.src('img/icons/*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('build/img/icons'))
-);
-// Можно ли так поставить одну задачу, что бы одновременно картинки из корневой папки img минифицировлись и складывались в build/img, а иконки из img/icons, соответственно в build/img/icons? Или только делить на две задачи, как у меня?
 
 gulp.task('svgpng', function () {
     gulp.src('img/icons/**/*.svg')
@@ -39,4 +34,13 @@ gulp.task('minify', function () {
         .pipe(svgmin())
         .pipe(gulp.dest('build'));
 });
-gulp.task('default', ['scripts', 'styles', 'image', 'icons', 'svgpng', 'minify']);
+gulp.task('templates', function buildHTML() {  
+    return gulp.src('./templates/pages/*.pug') // возьми все файлы по этому адресу  
+        .pipe(pug({
+            pretty: true // в объекте указываются дополнительные настройки для pug; в данном случае говорим "сделай html-файл красивым, с отступами"
+        }).on('error', function(error) {
+            console.log(error); // если нашел ошибку при компиляции, покажи ее
+        }))
+        .pipe(gulp.dest('build')); // положи результат в эту папку
+});
+gulp.task('default', ['scripts', 'styles', 'image', 'svgpng', 'minify']);

@@ -12,9 +12,9 @@
       <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
     </svg>
     <div class="container  container--column">  
-      <header class="header-main  header-main--mobile  header-main--light">
-        <div class="header-main__wrap">
-          <button class="header-main__arrow  header-main__arrow--light" type="button">
+      <header class="header-main  header-main--mobile">
+        <div class="header-main__row  header-main__row--light">
+          <button class="header-main__arrow" type="button">
             <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
           </button>
           <h2 class="header-main__title  header-main__title--small">Выберите место</h2>
@@ -27,9 +27,8 @@
         <form class="form  form--size-mobile" action="/echo" method="post">
           <div class="form__inner-search  form__inner-search--mobile">
             <label class="visually-hidden" for="form-search">В каком городе?</label>
-            <input class="form__search
-            "  type="search" name="search" id="form-search" value="В каком городе?">
-            <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
+            <input class="form__search"  type="search" name="search" id="form-search" value="В каком городе?">
+            <span class="form__icon-search"><svg class="form__svg-search  form__svg-search--light" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
           <button class="btn btn--form-mobile-search" type="button">Свое местоположение</button>
         </form>

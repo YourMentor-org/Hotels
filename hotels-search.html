@@ -7,7 +7,6 @@
     <link href="css/style.css" rel="stylesheet">
     <title>Гостиницы-поиск:</title>
   </head>
-
   <body class="page page--column">
     <svg style="display:none">
       <symbol id="month" viewbox="0 0 13 13"><path d="M10.2 9.6A6.8 6.8 0 0 1 4 0a6.8 6.8 0 1 0 8.994 9 6.863 6.863 0 0 1-2.794.6z"/></symbol>
@@ -15,17 +14,29 @@
         <symbol id="children" viewbox="0 0 6 12"><path d="M2.987 2.82a1.41 1.41 0 1 0-1.47-1.41 1.44 1.44 0 0 0 1.47 1.41zM5.98 7.04L4.79 3.5a.52.52 0 0 0-.484-.34H1.668a.52.52 0 0 0-.483.34l-1.19 3.54a.326.326 0 0 0 .04.3.337.337 0 0 0 .277.12h.3a.535.535 0 0 0 .484-.34l.338-1.01v5.24a.665.665 0 0 0 .678.65h.048a.664.664 0 0 0 .678-.65V7.93h.29v3.42a.664.664 0 0 0 .677.65h.047a.664.664 0 0 0 .678-.65V6.11l.34 1.01a.533.533 0 0 0 .483.34h.305a.337.337 0 0 0 .277-.12.323.323 0 0 0 .045-.3z"/></symbol>
         <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
         <symbol id="star" viewbox="0 0 11 11"><path d="M1437.5 2447l1.81 3.46 3.69.74-2.57 2.88.47 3.92-3.4-1.68-3.4 1.68.47-3.92-2.57-2.88 3.69-.74 1.81-3.46" transform="translate(-1432 -2447)"/></symbol>
+        <symbol id="arrow-mobile" viewbox="0 0 13 20"><path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M1765.98 497.811l-7.31 7.189 7.31 7.189-2.82 2.8-7.32-7.189-2.83-2.8 2.83-2.8 7.32-7.189z" transform="translate(-1753 -495)"/></symbol>
       </svg>
     <header class="header-main  header-main--pseudo">
       <div class="container  container--between">
-        <div class="header-main__slogan">
-          <a class="header-main__logo" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
+        <div class="header-main__slogan  mobili-none ">
+          <a class="header-main__logo  header-main__logo--indent" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
           <div class="header-main__inner">
             <h1 class="header-main__title">Гостиницы по лучшим ценам</h1>
             <h2 class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
           </div>
         </div>
-        <div class="result  result--light">
+        <div class="header-main__wrap  desktop-none">
+          <div class="header-main__row  header-main__row--dark">
+            <button class="header-main__arrow" type="button">
+              <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
+            </button>
+            <h2 class="header-main__title  header-main__title--small">Москва, Россия</h2>
+            <a class="header-main__logo  header-main__logo--mobile" href="#">
+              <picture><img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></picture>
+            </a>
+          </div>
+        </div>  
+        <div class="result  result--light   mobili-none">
           <div class="result__row  result__row--light-indent">
             <span class="result__col  result__col--large">23&ndash;25 января</span>
             <span class="result__col  result__col--medium">3
@@ -47,9 +58,8 @@
         <form class="form  form--size" action="/echo" method="post">
           <div class="form__inner-search  form__inner-search--narrow  form__inner-search--active">
             <label class="visually-hidden" for="form-search">Поиск по названию</label>
-            <input class="form__search
-            "  type="search" name="search" id="form-search" value="Поиск по названию">
-            <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
+            <input class="form__search  form__search--mobile"  type="search" name="search" id="form-search" value="Поиск по названию">
+            <span class="form__icon-search"><svg class="form__svg-search  form__svg-search--dark" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
         </form>
         <section class="catalog  catalog--indent-top">

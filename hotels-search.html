@@ -18,7 +18,7 @@
       </svg>
     <header class="header-main  header-main--pseudo">
       <div class="container  container--between">
-        <div class="header-main__slogan  mobili-none ">
+        <div class="header-main__slogan  mobile-none ">
           <a class="header-main__logo  header-main__logo--indent" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
           <div class="header-main__inner">
             <h1 class="header-main__title">Гостиницы по лучшим ценам</h1>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="header-main__wrap  desktop-none">
-          <div class="header-main__row  header-main__row--dark">
+          <div class="header-main__row">
             <button class="header-main__arrow" type="button">
               <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
             </button>
@@ -36,7 +36,7 @@
             </a>
           </div>
         </div>  
-        <div class="result  result--light   mobili-none">
+        <div class="result  result--light  mobile-none">
           <div class="result__row  result__row--light-indent">
             <span class="result__col  result__col--large">23&ndash;25 января</span>
             <span class="result__col  result__col--medium">3
@@ -63,8 +63,11 @@
           </div>
         </form>
         <section class="catalog  catalog--indent-top">
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-palmira.jpg" width="374" height="237" alt="Palmira Business Club">
+          <div class="catalog__item  catalog__item--order-three">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hotel-palmira_desktop.jpg">
+              <img class="catalog__image" src="img/hotel-palmira_mobile.jpg" alt="Palmira Business Club">
+            </picture>  
             <div class="catalog__features">
               <div class="catalog__inner">
                 <h2 class="catalog__title">Palmira Business Club</h2>
@@ -85,17 +88,23 @@
                     <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
                   </span>
                 </div>
-                <span class="catalog__price">6 200 руб.</span>
+                <span class="catalog__price  mobile-none">6 200 руб.</span>
+                <span class="catalog__price  desktop-none">13 200 руб.</span>
               </div>
             </div>
             <buttom class="btn btn--catalog">Подробнее</buttom>
           </div>
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-slavyanka-orange.jpg" width="374" height="237" alt="Гостиница Славянка">
+          <div class="catalog__item  catalog__item--order-two">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hotel-slavyanka-orange_desktop.jpg">
+              <img class="catalog__image" src="img/hotel-slavyanka-orange_mobile.jpg" alt="Palmira Business Club">
+            </picture>
             <div class="catalog__features">
               <div class="catalog__inner  catalog__inner--left">
-                <h2 class="catalog__title">Гостиница Славянка</h2>
-                <p class="catalog__text">Проспект Мира</p>
+                <h2 class="catalog__title   mobile-none">Гостиница Славянка</h2>
+                <h2 class="catalog__title  desktop-none">Palmira Business Club</h2>
+                <p class="catalog__text   mobile-none">Проспект Мира</p>
+                <p class="catalog__text  desktop-none">В центре города</p>
               </div>
               <div class="catalog__inner  catalog__inner--right">
                 <div class="rating  rating--size-small">
@@ -108,18 +117,27 @@
                   <span class="rating__item">
                     <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
                   </span>
+                  <span class="rating__item  desktop-none">
+                    <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
+                  </span>
                 </div>
-                <span class="catalog__price">5 000 р.</span>
+                <span class="catalog__price  mobile-none">5 000 р.</span>
+                <span class="catalog__price  desktop-none">15 000 р.</span>
               </div>
             </div>
             <buttom class="btn btn--catalog">Подробнее</buttom>
           </div>
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-slavyanka-blue.jpg" width="374" height="237" alt="Гостиница Славянка">
+          <div class="catalog__item  catalog__item--order-one">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hotel-slavyanka-blue_desktop.jpg">
+              <img class="catalog__image" src="img/hotel-slavyanka-blue_mobile.jpg" alt="Palmira Business Club">
+            </picture>
             <div class="catalog__features">
               <div class="catalog__inner  catalog__inner--left">
-                <h2 class="catalog__title">Гостиница Славянка</h2>
-                <p class="catalog__text">Проспект Мира</p>
+                <h2 class="catalog__title  mobile-none">Гостиница Славянка</h2>
+                <h2 class="catalog__title  desktop-none">Гостиница Шератон Москва</h2>
+                <p class="catalog__text  mobile-none">Проспект Мира</p>
+                <p class="catalog__text  desktop-none">Химки &mdash; рядом с Москвой</p>
               </div>
               <div class="catalog__inner  catalog__inner--right">
                 <div class="rating  rating--size-small">
@@ -139,13 +157,14 @@
                     <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
                   </span>
                 </div>
-                <span class="catalog__price">8 500 р.</span>
+                <span class="catalog__price  mobile-none">8 500 р.</span>
+                <span class="catalog__price  desktop-none">18 800 р.</span>
               </div>
             </div>
-            <buttom class="btn btn--catalog">Подробнее</buttom>
+            <buttom class="btn  btn--catalog">Подробнее</buttom>
           </div>
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-palmira.jpg" width="374" height="237" alt="Palmira Business Club">
+          <div class="catalog__item  mobile-none">
+            <img class="catalog__image" src="img/hotel-palmira_desktop.jpg" width="374" height="237" alt="Palmira Business Club">
             <div class="catalog__features">
               <div class="catalog__inner  catalog__inner--left">
                 <h2 class="catalog__title">Palmira Business Club</h2>
@@ -171,8 +190,8 @@
             </div>
             <buttom class="btn btn--catalog">Подробнее</buttom>
           </div>
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-slavyanka-orange.jpg" width="374" height="237" alt="Гостиница Славянка">
+          <div class="catalog__item  mobile-none">
+            <img class="catalog__image" src="img/hotel-slavyanka-orange_desktop.jpg" width="374" height="237" alt="Гостиница Славянка">
             <div class="catalog__features">
               <div class="catalog__inner  catalog__inner--left">
                 <h2 class="catalog__title">Гостиница Славянка</h2>
@@ -195,8 +214,8 @@
             </div>
             <buttom class="btn btn--catalog">Подробнее</buttom>
           </div>
-          <div class="catalog__item">
-            <img class="catalog__image" src="img/hotel-slavyanka-blue.jpg" width="374" height="237" alt="Гостиница Славянка">
+          <div class="catalog__item mobile-none">
+            <img class="catalog__image" src="img/hotel-slavyanka-blue_desktop.jpg" width="374" height="237" alt="Гостиница Славянка">
             <div class="catalog__features">
               <div class="catalog__inner  catalog__inner--left">
                 <h2 class="catalog__title">Гостиница Славянка</h2>

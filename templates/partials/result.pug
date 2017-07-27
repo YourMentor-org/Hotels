@@ -1,0 +1,42 @@
+include ../partials/icon.pug
+include ../partials/button.pug
+
+mixin result(light)
+  if light
+    .result.result--light
+      .result__row.result__row--light-indent
+        |
+        |
+        span.result__col.result__col--large 23&ndash;25 января
+        |
+        |
+        span.result__col.result__col--medium 3
+          +icon('month-light','13', '13', 'month')
+        |
+        |
+        span.result__col.result__col--medium 2
+          +icon('grownups-light','7', '18', 'grownups')
+        |
+        |
+        span.result__col.result__col--small 1
+          +icon('children-light','6', '12', 'children')
+      +button('result', 'Подробнее')  
+  else
+    .result.result--dark
+      +button('form', 'Начать поиск')
+      .result__row.result__row--dark
+        |
+        |
+        span.result__col.result__col--large 23&ndash;25 января
+        |
+        |
+        span.result__col.result__col--medium 3
+          +icon('month','13', '13', 'month')
+        |
+        |
+        span.result__col.result__col--medium 2
+          +icon('grownups','7', '18', 'grownups')
+        |
+        |
+        span.result__col.result__col--small 1
+          +icon('children','6', '12', 'children')

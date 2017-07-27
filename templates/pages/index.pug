@@ -1,10 +1,12 @@
 extends ../layout/index
 
-block main
+block title
+  - var title='Гостиницы поиск'
+  - var authenticated = false
   h1 Заголовок
   #container.col
       if youAreUsingPug
           p Вы используете pug
       else
           p Начните использовать pug
-          p Тестовый параграф!
+          p Тестовый параграф!!!

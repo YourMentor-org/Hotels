@@ -1,6 +1,22 @@
-doctype html  
-html(lang="en")  
-    head
-        title='Тестовая страница'
-    body
-        block main
+include ../partials/header.pug
+include ../partials/search.pug
+include ../partials/calendar.pug
+include ../partials/form-select.pug
+include ../partials/description.pug
+include ../partials/button.pug
+
+block body
+  - var bodyName = "page--column"
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(href='css/style.css', rel='stylesheet')
+    block title
+    title #{title}
+  body.page(class=bodyName)
+    include ../partials/sprite.pug
+    block main
+      

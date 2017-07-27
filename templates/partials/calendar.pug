@@ -1,0 +1,52 @@
+include ../partials/icon.pug
+include ../partials/field.pug
+
+mixin calendar(one)
+  if one
+      +field('', 'Выберите дату вселения', 'arrival-date', 'date-in', '23 января, 2017')
+        table.form__table
+          tr.form__top
+            th.form__caption(colspan="7") Январь
+              +icon('left-arrow','11', '16', 'left-arrow')
+              +icon('right-arrow','11', '16', 'right-arrow')
+          include ../partials/td-list.pug
+          tr.form__row
+            td.form__cell 22
+            td.form__cell.form__cell--active 23
+            td.form__cell 24
+            td.form__cell 25
+            td.form__cell 26
+            td.form__cell 27
+            td.form__cell 28
+          tr.form__row
+            td.form__cell 29
+            td.form__cell 30
+            td.form__cell 31
+            td.form__cell.form__cell--light 1
+            td.form__cell.form__cell--light 2
+            td.form__cell.form__cell--light 3
+            td.form__cell.form__cell--light 4
+  else
+      +field('form__field--indent', 'Выберите дату отъезда', 'date-departure', 'date-out', '24 января, 2017')
+        table.form__table
+          tr.form__top
+            th.form__caption(colspan="7") Январь
+              +icon('left-arrow','11', '16', 'left-arrow')
+              +icon('right-arrow','11', '16', 'right-arrow')
+          include ../partials/td-list.pug
+          tr.form__row
+            td.form__cell 22
+            td.form__cell 23
+            td.form__cell 24
+            td.form__cell.form__cell--active 25
+            td.form__cell 26
+            td.form__cell 27
+            td.form__cell 28
+          tr.form__row
+            td.form__cell 29
+            td.form__cell 30
+            td.form__cell 31
+            td.form__cell.form__cell--light 1
+            td.form__cell.form__cell--light 2
+            td.form__cell.form__cell--light 3
+            td.form__cell.form__cell--light 4

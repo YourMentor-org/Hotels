@@ -1,0 +1,24 @@
+block catalog-first
+  
+  .catalog__item
+    |
+    |
+    img.catalog__image(src="img/hotel-palmira.jpg" width="374" height="237" alt="Palmira Business Club")
+    .catalog__features
+      .catalog__inner.catalog__inner--left
+        h2.catalog__title Palmira Business Club
+        p.catalog__text В центре города
+      .catalog__inner.catalog__inner--right
+        .rating.rating--size-small
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+        |
+        |    
+        span.catalog__price 6 200 руб.
+    +button('catalog', 'Подробнее')

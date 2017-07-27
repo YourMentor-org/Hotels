@@ -1,0 +1,26 @@
+block catalog-third
+  
+  .catalog__item
+    |
+    |
+    img.catalog__image(src="img/hotel-slavyanka-blue.jpg" width="374" height="237" alt="Гостиница Славянка")
+    .catalog__features
+      .catalog__inner.catalog__inner--left
+        h2.catalog__title Гостиница Славянка
+        p.catalog__text Проспект Мира
+      .catalog__inner.catalog__inner--right
+        .rating.rating--size-small
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+          include ../partials/rating-item.pug
+          block rating-item
+        |
+        |    
+        span.catalog__price 8 500 руб.
+    +button('catalog', 'Подробнее')

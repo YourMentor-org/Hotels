@@ -1,0 +1,9 @@
+mixin search(name, text)
+  .form__inner-search.form__inner-search--active(class=' form__inner-search--' + name)
+    label.visually-hidden(for="form-search")=text
+    input.form__search(type="search" name="search" id="form-search" value=text)
+    span.form__icon-search
+      svg.form__svg-search(width="16" height="16")
+        use(xmlns="http://www.w3.org/2000/svg" xlink:href="#search")
+    
+      

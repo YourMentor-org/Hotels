@@ -14,7 +14,7 @@ gulp.task('scripts', function () {
 });
 gulp.task('styles', function() {
   return gulp.src('css/*.css')
-    .pipe(concat('out.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -42,5 +42,10 @@ gulp.task('templates', function buildHTML() {
             console.log(error); // если нашел ошибку при компиляции, покажи ее
         }))
         .pipe(gulp.dest('build')); // положи результат в эту папку
+});
+
+gulp.task('watch', function() {  
+    // убираем таск про html
+    gulp.watch('./templates/*.pug', ['templates']) // указываем, чтобы watch следил за нашими pug-файлами
 });
 gulp.task('default', ['scripts', 'styles', 'image', 'svgpng', 'minify']);

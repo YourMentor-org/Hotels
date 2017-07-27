@@ -1,0 +1,24 @@
+extends ../layout/index
+
+include ../partials/result.pug 
+
+block title
+  - var title = 'Гостиницы: расширенный поиск'
+block body
+  - bodyName = " page--background"
+block main
+  .container.container--column
+    +header(false)
+    main
+      form.form.form--layout(action="/echo" method="post")
+        +search('size', 'Направление, город, название отеля: например, Париж, Милан')
+        .form__wrap.form__wrap--row
+          +calendar(true)
+          +calendar(false)
+          +form-select('indent', 'form__box1', 'input-number1', 'Взрослых', 'input-number1', '2')
+          +form-select('', 'form__box2', 'input-number2', 'Детей', 'input-number2', '1')
+        .form__wrap.form__wrap--checkbox
+          input.form__checkbox(type="checkbox" name="discount" id="discount")
+          label.form__label-checkbox(for="discount") Добавить перелет и получить скидку
+          +icon('plane','17', '17', 'plane')
+        +result(false)  

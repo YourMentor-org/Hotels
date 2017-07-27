@@ -1,0 +1,15 @@
+include ../partials/icon.pug
+
+mixin form-select(name, span, labelFor, label, namber, text)
+  .form__select(class='form__select--dropdown  form__select--' + name)
+    |
+    |
+    span(class=span)
+      +icon('down-arrow1', '14', '9', 'down-arrow')
+    label.form__label(for=labelFor)=label
+    input.form__input.form__input--select(type="text" name=number id=number value=text placeholder=text)
+    ul.form__list
+      li.form__item 1
+      li.form__item 2
+      li.form__item 3
+      li.form__item 4

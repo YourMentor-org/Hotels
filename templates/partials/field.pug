@@ -1,0 +1,5 @@
+mixin field(name, label, time, date, text)
+  .form__field.form__field--calendar(class=name)
+    label.form__label(for="date-in")=label
+    input.form__input(type="text" name=time id=date value=text placeholder=text)
+    block

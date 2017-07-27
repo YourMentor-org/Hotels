@@ -1,0 +1,24 @@
+extends ../layout/index
+
+block title
+  - var title='Гостиницы: расширенный поиск'
+block main
+  +header(true)
+  main
+    .container.container--column
+      form.form.form--size(action="/echo" method="post")
+        +search('narrow', 'Поиск по названию')
+      section.catalog.catalog--indent-top
+        include ../partials/catalog-first.pug
+        block catalog-first
+        include ../partials/catalog-second.pug
+        block catalog-second
+        include ../partials/catalog-third.pug
+        block catalog-third
+        include ../partials/catalog-first.pug
+        block catalog-first
+        include ../partials/catalog-second.pug
+        block catalog-second
+        include ../partials/catalog-third.pug
+        block catalog-third
+  

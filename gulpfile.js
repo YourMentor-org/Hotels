@@ -35,13 +35,13 @@ gulp.task('minify', function () {
         .pipe(gulp.dest('build'));
 });
 gulp.task('templates', function buildHTML() {  
-    return gulp.src('./templates/pages/*.pug') // возьми все файлы по этому адресу  
+    return gulp.src('./templates/pages/*.pug')
         .pipe(pug({
-            pretty: true // в объекте указываются дополнительные настройки для pug; в данном случае говорим "сделай html-файл красивым, с отступами"
+            pretty: true
         }).on('error', function(error) {
-            console.log(error); // если нашел ошибку при компиляции, покажи ее
+            console.log(error);
         }))
-        .pipe(gulp.dest('build')); // положи результат в эту папку
+        .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {  

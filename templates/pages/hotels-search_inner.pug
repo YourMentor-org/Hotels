@@ -6,10 +6,11 @@ block title
   - var title = 'Гостиницы: расширенный поиск'
 block body
   - bodyName = " page--background"
+block header
+  +header(true)
 block main
-  .container.container--column
-    +header(false)
-    main
+  main
+    .container.container--column
       form.form.form--layout(action="/echo" method="post")
         +search('size', 'Направление, город, название отеля: например, Париж, Милан')
         .form__wrap.form__wrap--row
@@ -21,4 +22,4 @@ block main
           input.form__checkbox(type="checkbox" name="discount" id="discount")
           label.form__label-checkbox(for="discount") Добавить перелет и получить скидку
           +icon('plane','17', '17', 'plane')
-        +result(false)  
+        +result(false)

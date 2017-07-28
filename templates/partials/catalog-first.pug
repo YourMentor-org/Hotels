@@ -10,14 +10,10 @@ block catalog-first
         p.catalog__text В центре города
       .catalog__inner.catalog__inner--right
         .rating.rating--size-small
-          include ../partials/rating-item.pug
-          block rating-item
-          include ../partials/rating-item.pug
-          block rating-item
-          include ../partials/rating-item.pug
-          block rating-item
-          include ../partials/rating-item.pug
-          block rating-item
+          - for (var x = 0; x < 4; x++)
+            span.rating__item
+              svg.rating__star(width="11" height="11")
+                use(xmlns="http://www.w3.org/2000/svg" xlink:href="#star")  
         |
         |    
         span.catalog__price 6 200 руб.

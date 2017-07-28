@@ -68,6 +68,7 @@ a {
   flex-direction: column;
 }
 .page--background {
+  flex-direction: column;
   position: relative;
   background-color: #red;
   background-image: url("../img/background.jpg");

@@ -18,5 +18,7 @@ html(lang="ru")
     title #{title}
   body.page(class=bodyName)
     include ../partials/sprite.pug
+    block header
+      +header(true)
     block main
       

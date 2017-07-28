@@ -2,8 +2,9 @@ extends ../layout/index
 
 block title
   - var title='Гостиницы: расширенный поиск'
+block header
+  +header(false)
 block main
-  +header(true)
   main
     .container.container--column
       section.description
@@ -11,14 +12,11 @@ block main
           h2.description__title-header Palmira Bussines Club
           p.description__subtitle В центре города
           .rating.rating--size-tiny
-            include ../partials/rating-item.pug
-            block rating-item
-            include ../partials/rating-item.pug
-            block rating-item
-            include ../partials/rating-item.pug
-            block rating-item
-            include ../partials/rating-item.pug
-            block rating-item
+            - for (var x = 0; x < 4; x++)
+              span.rating__item
+                svg.rating__star(width="11" height="11")
+                  use(xmlns="http://www.w3.org/2000/svg" xlink:href="#star")
+                    
           p.description__text 9 из 10 &mdash; по 1576 отзывам гостей
         .description__wrap
           +description('Класс «Эконом»','6 200 руб')
@@ -28,16 +26,14 @@ block main
         h4.info__title.info__title--up Информация
         ul.info__list
           block container
-          -
-            var list = ['Заселение в номера с 14:00', 'Выезд из номера с 12:00', 'Номеров']
+          - var list = ['Заселение в номера с 14:00', 'Выезд из номера с 12:00', 'Номеров']
           each item in list
             li.info__item= item
       section.info.info--indent
         h4.info__title.info__title--under Услуги в отеле
         ul.info__list
           block container
-          -
-            var list = ['Круглосуточная стойка регистрации', 'Зоны общественного пользования с кондиционированием', 'Номера для аллергиков', 'Банкомат на территории отеля', 'Бар']
+          - var list = ['Круглосуточная стойка регистрации', 'Зоны общественного пользования с кондиционированием', 'Номера для аллергиков', 'Банкомат на территории отеля', 'Бар']
           each item in list
             li.info__item= item
         +button('info', 'Подробнее')
@@ -45,8 +41,7 @@ block main
         h4.address__title Расположение
         ul.address__list
           block container
-          -
-            var list = ['141411, Химки', 'Международное шоссе, 28-б, стр. 5']
+          - var list = ['141411, Химки', 'Международное шоссе, 28-б, стр. 5']
           each item in list
             li.address__item= item
     .map.map--indent

@@ -19,18 +19,26 @@
           </button>
           <h2 class="header-main__title  header-main__title--small">Выберите место</h2>
           <a class="header-main__logo  header-main__logo--mobile" href="#">
-            <picture><img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></picture>
+            <img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards">
           </a>
         </div>  
       </header>
       <main>
         <form class="form  form--size-mobile" action="/echo" method="post">
           <div class="form__inner-search  form__inner-search--mobile">
+            <div class="form__menu">
+              <p class="form__item-menu"><span class="form__bold">Москва,</span> Россия</p>
+              <p class="form__item-menu"><span class="form__bold">Монте-Карло,</span> Монако</p>
+              <p class="form__item-menu"><span class="form__bold">Мо,</span> Франция</p>
+              <p class="form__item-menu"><span class="form__bold">Москва,</span> Россия</p>
+              <p class="form__item-menu"><span class="form__bold">Монте-Карло,</span> Монако</p>
+              <p class="form__item-menu"><span class="form__bold">Мо,</span> Франция</p>
+            </div>
             <label class="visually-hidden" for="form-search">В каком городе?</label>
             <input class="form__search"  type="search" name="search" id="form-search" value="В каком городе?">
             <span class="form__icon-search"><svg class="form__svg-search  form__svg-search--light" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
-          <button class="btn btn--form-mobile-search" type="button">Свое местоположение</button>
+          <button class="btn btn--form-light" type="button">Свое местоположение</button>
         </form>
       </main>  
     </div>

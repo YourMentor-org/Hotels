@@ -1039,15 +1039,29 @@ a {
     align-items: center;
     padding-top: 30px;
   }
+  .form--mobile {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    padding-top: 25px;
+    margin: 0 auto;
+  }
   .form__inner-search--narrow {
     width: 74%;
     background-color: #ffffff;
     border-radius: 50px;
   }
   .form__inner-search--mobile {
+    position: relative;
     width: 73%;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
     margin-bottom: 25px;
+    transition: 500ms;
+  }
+  .form__inner-search--mobile:hover .form__menu {
+    display: block;
   }
   .form__search {
     color: #ffffff;
@@ -1065,7 +1079,94 @@ a {
     stroke: #1e1f26;
     opacity: 0.7;
   }
-  .btn--form-mobile-search {
+  .form__menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    padding: 10px 10px 0px;
+    top: 32px;
+    left: 0px;
+    color: #ffffff;
+    background-color: rgba(30, 31, 38, 0.8);
+  }
+  .form__item-menu {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .form__bold {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .form__box {
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 29px;
+  }
+  .form__box--calendar .form__table {
+    display: block;
+  }
+  .form__table {
+    top: 73px;
+  }
+  .form__table::before {
+    border: none;
+  }
+  .form__holder {
+    width: 58%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .form__label {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .form__button {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 48px;
+    height: 48px;
+    background-color:  rgba(255, 255, 255, 0.2); 
+    border: none;
+    outline: none;
+  }
+  .form__button--active {
+    background-color: #db0536;
+  }
+  .form__number {
+    display: block;
+    box-sizing: border-box;
+    width: 30px;
+    padding: 0;
+    font-family: "Proxima Nova Regular", Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+  }
+  .form__number--size {
+    padding-left: 6px;
+  }
+  .btn--form {
+    min-width: 220px;
+    padding: 12px 57px;
+    margin-bottom: 0;
+  }
+  .btn--form-light {
     padding: 9px 16px;
     font-size: 1.1rem;
     line-height: 1.2;
@@ -1074,9 +1175,35 @@ a {
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0);
   }
-  .btn--form-mobile-search:hover {
+  .btn--form-light:hover {
     border-color: rgba(255, 255, 255, 0);
     background-color: rgba(255, 255, 255, 0.4);
+  }
+  .btn--form-light-small {
+    min-width: 133px;
+  }
+  .btn--form-mobile {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #ffffff;
+    background-color: #db0536;
+    border: 1px solid #db0536;
+    padding: 14px 27px;
+  }
+  .icon--minus {
+    width: 24px;
+    height: 4px;
+    top: 45%;
+    left: 25%;
+    fill: #ffffff;
+  }
+  .icon--plus {
+    width: 24px;
+    height: 24px;
+    top: 25%;
+    left: 25%;  
+    fill: #ffffff;
   }
   .result {
     padding-top: 0;
@@ -1104,11 +1231,6 @@ a {
   }
   .slider__control--active {
     background-color: rgba(255, 255, 255, 1);
-  }
-  .btn--form {
-    min-width: 220px;
-    padding: 12px 57px;
-    margin-bottom: 0px;
   }
   .catalog {
     flex-direction: column;

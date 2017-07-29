@@ -1113,7 +1113,11 @@ a {
     display: block;
   }
   .form__table {
+    width: 300px;
     top: 73px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
   }
   .form__table::before {
     border: none;

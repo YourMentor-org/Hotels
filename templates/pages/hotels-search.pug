@@ -2,6 +2,7 @@ extends ../layout/index
 
 block title
   - var title='Гостиницы: расширенный поиск'
+
 block header
   +header(false)
 block main
@@ -10,9 +11,5 @@ block main
       form.form.form--size(action="/echo" method="post")
         +search('narrow', 'Поиск по названию')
       section.catalog.catalog--indent-top
-        +catalog(true)
-        +catalog(false, true)
-        +catalog(one, two)
-        +catalog(true)
-        +catalog(false, true)
-        +catalog(one, two)
+        +catalog_example('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', 4, '6 200 руб.')
+        +catalog_example('img/hotel-palmira.jpg', 'Palmira Business Club 3', 'На окраине города', 2, '3 200 руб.')

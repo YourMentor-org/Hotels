@@ -10,13 +10,9 @@ block main
       form.form.form--size(action="/echo" method="post")
         +search('narrow', 'Поиск по названию')
       section.catalog.catalog--indent-top
-        include ../partials/catalog-first.pug
-        include ../partials/catalog-second.pug
-        include ../partials/catalog-third.pug
-        include ../partials/catalog-first.pug
-        include ../partials/catalog-second.pug
-        include ../partials/catalog-third.pug
-            
-        
-
-  
+        +catalog(true)
+        +catalog(false, true)
+        +catalog(one, two)
+        +catalog(true)
+        +catalog(false, true)
+        +catalog(one, two)

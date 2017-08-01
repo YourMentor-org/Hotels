@@ -6,17 +6,17 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     pug = require('gulp-pug');
 
-gulp.task('scripts', function () {  
+gulp.task('scripts', () => 
     gulp.src('js/flexibility.js')
         .pipe(uglify())
-        .pipe(gulp.dest('build/js'));
-        
-});
-gulp.task('styles', function() {
-  return gulp.src('css/*.css')
+        .pipe(gulp.dest('build/js'))
+);
+
+gulp.task('styles', () =>
+  gulp.src('css/*.css')
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('build/css'));
-});
+    .pipe(gulp.dest('build/css'))
+);
 
 gulp.task('image', () =>
 	gulp.src('img/*')
@@ -24,28 +24,38 @@ gulp.task('image', () =>
 		.pipe(gulp.dest('build/img'))
 );
 
-gulp.task('svgpng', function () {
+gulp.task('svgpng', () =>
     gulp.src('img/icons/**/*.svg')
         .pipe(svg2png())
-        .pipe(gulp.dest('build/img/icons'));
-});
-gulp.task('minify', function () {
-    return gulp.src('search1.svg')
+        .pipe(gulp.dest('build/img/icons'))
+);
+
+gulp.task('minify', () =>
+    gulp.src('search1.svg')
         .pipe(svgmin())
-        .pipe(gulp.dest('build'));
-});
-gulp.task('templates', function buildHTML() {  
-    return gulp.src('./templates/pages/*.pug')
+        .pipe(gulp.dest('build'))
+);
+gulp.task('templates', () =>
+    gulp.src('./templates/pages/*.pug')
         .pipe(pug({
             pretty: true
         }).on('error', function(error) {
             console.log(error);
         }))
-        .pipe(gulp.dest('build'));
-});
+        .pipe(gulp.dest('build'))
+);
 
-gulp.task('watch', function() {  
-    // убираем таск про html
-    gulp.watch('./templates/*.pug', ['templates']) // указываем, чтобы watch следил за нашими pug-файлами
-});
+gulp.task('watch', () =>
+    gulp.watch('./templates/*.pug', ['templates'])
+);
+
+gulp.task('scripts', () =>
+    gulp.src('js/flexibility.js')
+       .pipe(uglify())
+       .pipe(concat('style.css'))
+       .pipe(imagemin())
+       .pipe(gulp.dest('build'))
+);
+gulp.task('build', ['scripts', 'styles', 'image', 'svgpng', 'minify','templates']);
+
 gulp.task('default', ['scripts', 'styles', 'image', 'svgpng', 'minify']);

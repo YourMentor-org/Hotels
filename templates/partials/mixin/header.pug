@@ -1,12 +1,9 @@
-include ../partials/result.pug
-include ../partials/button.pug
-
 mixin header(wrap)
     if wrap
         header.header-main.header-main--size
-          include ../partials/slogan.pug
+          include ../block/slogan.pug
     else
         header.header-main.header-main--pseudo
           .container.container--between
-            include ../partials/slogan.pug
+            include ../block/slogan.pug
             +result(true)

@@ -1,11 +1,8 @@
-include ../partials/header.pug
-include ../partials/search.pug
-include ../partials/calendar.pug
-include ../partials/form-select.pug
-include ../partials/description.pug
-include ../partials/button.pug
-include ../partials/catalog.pug
-
+include ../partials/mixin/header.pug
+include ../partials/mixin/search.pug
+include ../partials/mixin/result.pug
+include ../partials/mixin/button.pug
+include ../partials/mixin/icon.pug
 
 block body
   - var bodyName = "page--column"
@@ -19,7 +16,7 @@ html(lang="ru")
     block title
     title #{title}
   body.page(class=bodyName)
-    include ../partials/sprite.pug
+    include ../partials/block/sprite.pug
     block header
       +header(true)
     block main

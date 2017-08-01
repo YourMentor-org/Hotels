@@ -1,5 +1,4 @@
-include ../partials/icon.pug
-include ../partials/field.pug
+include ../table/field.pug
 
 mixin calendar(one)
   if one
@@ -9,7 +8,7 @@ mixin calendar(one)
             th.form__caption(colspan="7") Январь
               +icon('left-arrow','11', '16', 'left-arrow')
               +icon('right-arrow','11', '16', 'right-arrow')
-          include ../partials/td-list.pug
+          include ../table/td-list.pug
           tr.form__row
             td.form__cell 22
             td.form__cell.form__cell--active 23
@@ -33,7 +32,7 @@ mixin calendar(one)
             th.form__caption(colspan="7") Январь
               +icon('left-arrow','11', '16', 'left-arrow')
               +icon('right-arrow','11', '16', 'right-arrow')
-          include ../partials/td-list.pug
+          include ../table/td-list.pug
           tr.form__row
             td.form__cell 22
             td.form__cell 23

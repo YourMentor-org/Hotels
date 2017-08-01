@@ -56,6 +56,6 @@ gulp.task('scripts', () =>
        .pipe(imagemin())
        .pipe(gulp.dest('build'))
 );
-gulp.task('build', ['scripts', 'styles', 'image', 'svgpng', 'minify','templates']);
+gulp.task('build', ['scripts', 'styles', 'image', 'svgpng', 'minify']);
 
 gulp.task('default', ['scripts', 'styles', 'image', 'svgpng', 'minify']);

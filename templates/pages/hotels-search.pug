@@ -3,12 +3,8 @@ extends ../layout/index
 include ../partials/mixin/catalog.pug
 
 block title
-<<<<<<< HEAD
-  - var title='Гостиницы'
-=======
   - var title='Гостиницы: расширенный поиск'
 
->>>>>>> 254658f2f1a029c008d8a10ab4f7a55d046a367e
 block header
   +header(false)
 block main
@@ -17,14 +13,9 @@ block main
       form.form.form--size(action="/echo" method="post")
         +search('narrow', 'Поиск по названию')
       section.catalog.catalog--indent-top
-<<<<<<< HEAD
         +catalog('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', '4', '6 200 руб.')
         +catalog('img/hotel-slavyanka-orange.jpg', 'Гостиница Славянка', 'Проспект Мира', '3', '5 000 руб.')
         +catalog('img/hotel-slavyanka-blue.jpg', 'Гостиница Славянка', 'Проспект Мира', '5', '8 500 руб.')
         +catalog('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', '4', '6 200 руб.')
         +catalog('img/hotel-slavyanka-orange.jpg', 'Гостиница Славянка', 'Проспект Мира', '3', '5 000 руб.')
         +catalog('img/hotel-slavyanka-blue.jpg', 'Гостиница Славянка', 'Проспект Мира', '5', '8 500 руб.')
-=======
-        +catalog_example('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', 4, '6 200 руб.')
-        +catalog_example('img/hotel-palmira.jpg', 'Palmira Business Club 3', 'На окраине города', 2, '3 200 руб.')
->>>>>>> 254658f2f1a029c008d8a10ab4f7a55d046a367e

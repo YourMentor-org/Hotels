@@ -17,20 +17,20 @@ var prod = environments.production;
 
 gulp.task('scripts', function () {
     return gulp.src('js/*.js')
-        .pipe(concat('flexibility.js'))
-        .pipe(uglify())
+        .pipe(prod(concat('main.min.js')))
+        .pipe(prod(uglify()))
         .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('styles', function () {
     gulp.src('css/*.css')
-        .pipe(autoprefixer({
+        .pipe(prod(autoprefixer({
           browsers: ["last 2 versions"]
-        }))
+        })))
         .pipe(gulp.dest("build/css"))
-        .pipe(cssnano())
-        .pipe(concat('style.css'))
-        .pipe(rename('style.min.css'))
+        .pipe(prod(cssnano()))
+        .pipe(prod(concat('style.css')))
+        .pipe(prod(rename('style.min.css')))
         .pipe(gulp.dest('build/css'));
 });
 
@@ -39,47 +39,47 @@ gulp.task('lint-css', function lintCssTask() {
 
     return gulp
         .src('css/*.css')
-        .pipe(gulpStylelint({
+        .pipe(dev(gulpStylelint({
             reporters: [
                 {formatter: 'string', console: true}
             ]
-        }));
+        })));
 });
 
 gulp.task('image', function () {
 	  return gulp.src('img/*')
-    		.pipe(imagemin())
+    		.pipe(prod(imagemin()))
     		.pipe(gulp.dest('build/img'));
 });
 
 gulp.task('minify', function () {
     return gulp.src('img/icons/*.svg')
-        .pipe(svgmin())
+        .pipe(prod(svgmin()))
         .pipe(gulp.dest('build/img/icons'))
 });
 
 gulp.task('templates', function buildHTML() {
     return gulp.src('./templates/pages/*.pug')
-        .pipe(pug({
+        .pipe(prod(pug({
             pretty: true 
         }).on('error', function(error) {
             console.log(error);
-        }))
+        })))
         .pipe(gulp.dest('build'));
 });
 
 gulp.task('html', function() {
     gulp.src('./*.html')
-        .pipe(gulp.dest('build/'))
+        .pipe(prod(gulp.dest('build/')))
 });
 
 gulp.task('clean', function () {
     return gulp.src('build/', {read: false})
-        .pipe(prod(clean()));
+        .pipe(dev(clean()));
 });
 
 gulp.task('browser-sync', function() {
-    return browserSync.init({
+    return browserSync.init(dev({
         server: {
             baseDir: './build/'
         },
@@ -87,7 +87,7 @@ gulp.task('browser-sync', function() {
         host: 'localhost',
         logPrefix: 'frontend',
         open: false
-    });
+    }));
 });
 
 gulp.task('default', ['clean'], function() {

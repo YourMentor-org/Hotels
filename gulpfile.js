@@ -17,9 +17,9 @@ var prod = environments.production;
 
 gulp.task('scripts', function () {
     return gulp.src('js/*.js')
-        .pipe(prod(concat('main.min.js')))
-        .pipe(prod(uglify()))
-        .pipe(gulp.dest('build/js'));
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(prod(gulp.dest('build/js')));
 });
 
 gulp.task('styles', function () {
@@ -27,11 +27,11 @@ gulp.task('styles', function () {
         .pipe(prod(autoprefixer({
           browsers: ["last 2 versions"]
         })))
-        .pipe(gulp.dest("build/css"))
-        .pipe(prod(cssnano()))
-        .pipe(prod(concat('style.css')))
-        .pipe(prod(rename('style.min.css')))
-        .pipe(gulp.dest('build/css'));
+        .pipe(prod(gulp.dest("build/css")))
+        .pipe(cssnano())
+        .pipe(concat('style.css'))
+        .pipe(rename('style.min.css'))
+        .pipe(prod(gulp.dest('build/css')));
 });
 
 gulp.task('lint-css', function lintCssTask() {
@@ -49,23 +49,23 @@ gulp.task('lint-css', function lintCssTask() {
 gulp.task('image', function () {
 	  return gulp.src('img/*')
     		.pipe(prod(imagemin()))
-    		.pipe(gulp.dest('build/img'));
+    		.pipe(prod(gulp.dest('build/img')));
 });
 
 gulp.task('minify', function () {
     return gulp.src('img/icons/*.svg')
         .pipe(prod(svgmin()))
-        .pipe(gulp.dest('build/img/icons'))
+        .pipe(prod(gulp.dest('build/img/icons')))
 });
 
 gulp.task('templates', function buildHTML() {
     return gulp.src('./templates/pages/*.pug')
-        .pipe(prod(pug({
+        .pipe(pug({
             pretty: true 
         }).on('error', function(error) {
             console.log(error);
-        })))
-        .pipe(gulp.dest('build'));
+        }))
+        .pipe(prod(gulp.dest('build')));
 });
 
 gulp.task('html', function() {
@@ -75,7 +75,7 @@ gulp.task('html', function() {
 
 gulp.task('clean', function () {
     return gulp.src('build/', {read: false})
-        .pipe(dev(clean()));
+        .pipe(prod(clean()));
 });
 
 gulp.task('browser-sync', function() {

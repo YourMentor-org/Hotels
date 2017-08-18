@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Гостиницы: расширенный поиск</title>
+  </head>
+  <body class="page  page--light">
+    <svg style="display:none">
+      <symbol id="arrow-mobile" viewbox="0 0 13 20"><path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M1765.98 497.811l-7.31 7.189 7.31 7.189-2.82 2.8-7.32-7.189-2.83-2.8 2.83-2.8 7.32-7.189z" transform="translate(-1753 -495)"/></symbol>
+      <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
+      <symbol id="minus" viewbox="0 0 24 4"><path d="M0 0h24v4H0z"/></symbol>
+      <symbol id="plus" viewbox="0 0 24 24"><path d="M24 14H14v10h-4V14H0v-4h10V0h4v10h10v4z"/></symbol>
+      <symbol id="left-arrow" viewbox="0 0 10.906 16"><path d="M7.945-.01L0 7.99l7.945 8 2.96-2.95-5.02-5.05 5.02-5.06z"/></symbol>
+      <symbol id="right-arrow" viewbox="0 0 10.91 16"><path d="M2.96-.01l7.95 8-7.95 8L0 13.04l5.02-5.05L0 2.93z"/></symbol>
+    </svg>
+    <div class="container  container--col">  
+      <header class="header-main  header-main--mobile">
+        <div class="header-main__row">
+          <button class="header-main__arrow" type="button">
+            <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
+          </button>
+          <h2 class="header-main__title  header-main__title--light">Москва, Россия</h2>
+          <a class="header-main__logo  header-main__logo--slider" href="#">
+            <img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards">
+          </a>
+        </div>  
+      </header>
+      <main>
+        <form class="form  form--mobile" action="/echo" method="post">
+          <div class="form__container  form__container--calendar">
+            <button class="btn btn--form-light  btn--form-light-small" type="submit">Сегодня</button>
+            <button class="btn btn--form-light  btn--form-light-small" type="submit">Выбрать дату</button>
+            <table class="form__table">
+              <tr class="form__top">
+                <th class="form__caption" colspan="7">
+                  <svg class="icon  icon--left-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#left-arrow"></use></svg>
+                  Январь
+                  <svg class="icon  icon--right-arrow" width="11" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#right-arrow"></use></svg>
+                </th>
+              </tr>
+              <tr class="form__top">
+                <td class="form__cell-week">пн</td>
+                <td class="form__cell-week">вт</td>
+                <td class="form__cell-week">ср</td>
+                <td class="form__cell-week">чт</td>
+                <td class="form__cell-week">пт</td>
+                <td class="form__cell-week">сб</td>
+                <td class="form__cell-week">вс</td>
+              </tr>
+              <tr class="form__row">
+                <td class="form__cell">1</td>
+                <td class="form__cell">2</td>
+                <td class="form__cell">3</td>
+                <td class="form__cell">4</td>
+                <td class="form__cell">5</td>
+                <td class="form__cell">6</td>
+                <td class="form__cell">7</td>
+              </tr>
+              <tr class="form__row">
+                <td class="form__cell">8</td>
+                <td class="form__cell">9</td>
+                <td class="form__cell">10</td>
+                <td class="form__cell">11</td>
+                <td class="form__cell">12</td>
+                <td class="form__cell">13</td>
+                <td class="form__cell">14</td>
+              </tr>
+              <tr class="form__row">
+                <td class="form__cell">15</td>
+                <td class="form__cell">16</td>
+                <td class="form__cell">17</td>
+                <td class="form__cell">18</td>
+                <td class="form__cell">19</td>
+                <td class="form__cell  form__cell--active">20</td>
+                <td class="form__cell">21</td>
+              </tr>
+              <tr class="form__row">
+                <td class="form__cell">22</td>
+                <td class="form__cell  form__cell--active">23</td>
+                <td class="form__cell">24</td>
+                <td class="form__cell">25</td>
+                <td class="form__cell">26</td>
+                <td class="form__cell">27</td>
+                <td class="form__cell">28</td>
+              </tr>
+              <tr class="form__row">
+                <td class="form__cell">29</td>
+                <td class="form__cell">30</td>
+                <td class="form__cell">31</td>
+                <td class="form__cell  form__cell--light">1</td>
+                <td class="form__cell  form__cell--light">2</td>
+                <td class="form__cell  form__cell--light">3</td>
+                <td class="form__cell  form__cell--light">4</td>
+              </tr>
+            </table>  
+          </div>
+          <div class="form__holder">
+            <label class="form__label" for="grownup">Гостей взрослых</label>
+            <button class="form__button" type="button">
+							<svg class="icon  icon--minus" width="24" height="4"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#minus"></use></svg>
+						</button>
+						<input class="form__number" type="text" name="grownup" id="grownup" value="2"  placeholder="2">
+            <button class="form__button  form__button--active" type="button">
+							<svg class="icon  icon--plus" width="24" height="24"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#plus"></use></svg>
+						</button>
+          </div>
+          <div class="form__holder">
+            <label class="form__label" for="child">Детей</label>
+            <button class="form__button" type="button">
+							<svg class="icon  icon--minus" width="24" height="4"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#minus"></use></svg>
+						</button>
+						<input class="form__number  form__number--size" type="text" name="child" id="child" value="1"  placeholder="1">
+            <button class="form__button" type="button">
+							<svg class="icon  icon--plus" width="24" height="24"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#plus"></use></svg>
+						</button>
+          </div>
+          <button class="btn  btn--form-mobile" type="submit">Показать отели и цены</button>
+        </form>
+      </main>  
+    </div>
+  </body>
+</html>

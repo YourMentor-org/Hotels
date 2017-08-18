@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
-  <title>Гостиницы-поиск:</title>
-</head>
-<body class="page page--column">
-  <svg style="display:none">
-    <symbol id="month" viewbox="0 0 13 13"><path d="M10.2 9.6A6.8 6.8 0 0 1 4 0a6.8 6.8 0 1 0 8.994 9 6.863 6.863 0 0 1-2.794.6z"/></symbol>
-      <symbol id="grownups" viewbox="0 0 7 18"><path d="M6.49 4.69a2.074 2.074 0 0 0-1.42-.45h-3.1a2.327 2.327 0 0 0-1.42.41 1.49 1.49 0 0 0-.548 1.28v4.65a.6.6 0 0 0 .89.54.577.577 0 0 0 .283-.54V6.34h.378v10.8a.78.78 0 1 0 1.552 0v-5.33H3.9v5.33a.78.78 0 1 0 1.55 0V6.34h.38v3.95a.753.753 0 0 0 .284.66.46.46 0 0 0 .586 0 .735.735 0 0 0 .3-.66V5.97a1.622 1.622 0 0 0-.51-1.28zM3.46 3.5a1.47 1.47 0 0 0 1.135-.52 1.777 1.777 0 0 0 .473-1.25A1.756 1.756 0 0 0 4.597.51a1.518 1.518 0 0 0-2.27 0 1.787 1.787 0 0 0-.473 1.24 1.746 1.746 0 0 0 .473 1.23 1.47 1.47 0 0 0 1.135.52z"/></symbol>
-      <symbol id="children" viewbox="0 0 6 12"><path d="M2.987 2.82a1.41 1.41 0 1 0-1.47-1.41 1.44 1.44 0 0 0 1.47 1.41zM5.98 7.04L4.79 3.5a.52.52 0 0 0-.484-.34H1.668a.52.52 0 0 0-.483.34l-1.19 3.54a.326.326 0 0 0 .04.3.337.337 0 0 0 .277.12h.3a.535.535 0 0 0 .484-.34l.338-1.01v5.24a.665.665 0 0 0 .678.65h.048a.664.664 0 0 0 .678-.65V7.93h.29v3.42a.664.664 0 0 0 .677.65h.047a.664.664 0 0 0 .678-.65V6.11l.34 1.01a.533.533 0 0 0 .483.34h.305a.337.337 0 0 0 .277-.12.323.323 0 0 0 .045-.3z"/></symbol>
-      <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
-      <symbol id="star" viewbox="0 0 11 11"><path d="M1437.5 2447l1.81 3.46 3.69.74-2.57 2.88.47 3.92-3.4-1.68-3.4 1.68.47-3.92-2.57-2.88 3.69-.74 1.81-3.46" transform="translate(-1432 -2447)"/></symbol>
-    </svg>
-  <header class="header-main  header-main--pseudo">
-    <div class="container  container--between">
-      <div class="header-main__slogan">
-        <a class="header-main__logo" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
-        <div class="header-main__inner">
-          <h1 class="header-main__title">Гостиницы по лучшим ценам</h1>
-          <h2 class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Гостиницы-поиск:</title>
+    <script src="js/respimage.min.js" async></script>
+  </head>
+  <body class="page page--col">
+    <svg style="display:none">
+      <symbol id="month" viewbox="0 0 13 13"><path d="M10.2 9.6A6.8 6.8 0 0 1 4 0a6.8 6.8 0 1 0 8.994 9 6.863 6.863 0 0 1-2.794.6z"/></symbol>
+        <symbol id="grownups" viewbox="0 0 7 18"><path d="M6.49 4.69a2.074 2.074 0 0 0-1.42-.45h-3.1a2.327 2.327 0 0 0-1.42.41 1.49 1.49 0 0 0-.548 1.28v4.65a.6.6 0 0 0 .89.54.577.577 0 0 0 .283-.54V6.34h.378v10.8a.78.78 0 1 0 1.552 0v-5.33H3.9v5.33a.78.78 0 1 0 1.55 0V6.34h.38v3.95a.753.753 0 0 0 .284.66.46.46 0 0 0 .586 0 .735.735 0 0 0 .3-.66V5.97a1.622 1.622 0 0 0-.51-1.28zM3.46 3.5a1.47 1.47 0 0 0 1.135-.52 1.777 1.777 0 0 0 .473-1.25A1.756 1.756 0 0 0 4.597.51a1.518 1.518 0 0 0-2.27 0 1.787 1.787 0 0 0-.473 1.24 1.746 1.746 0 0 0 .473 1.23 1.47 1.47 0 0 0 1.135.52z"/></symbol>
+        <symbol id="children" viewbox="0 0 6 12"><path d="M2.987 2.82a1.41 1.41 0 1 0-1.47-1.41 1.44 1.44 0 0 0 1.47 1.41zM5.98 7.04L4.79 3.5a.52.52 0 0 0-.484-.34H1.668a.52.52 0 0 0-.483.34l-1.19 3.54a.326.326 0 0 0 .04.3.337.337 0 0 0 .277.12h.3a.535.535 0 0 0 .484-.34l.338-1.01v5.24a.665.665 0 0 0 .678.65h.048a.664.664 0 0 0 .678-.65V7.93h.29v3.42a.664.664 0 0 0 .677.65h.047a.664.664 0 0 0 .678-.65V6.11l.34 1.01a.533.533 0 0 0 .483.34h.305a.337.337 0 0 0 .277-.12.323.323 0 0 0 .045-.3z"/></symbol>
+        <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
+        <symbol id="star" viewbox="0 0 11 11"><path d="M1437.5 2447l1.81 3.46 3.69.74-2.57 2.88.47 3.92-3.4-1.68-3.4 1.68.47-3.92-2.57-2.88 3.69-.74 1.81-3.46" transform="translate(-1432 -2447)"/></symbol>
+        <symbol id="arrow-mobile" viewbox="0 0 13 20"><path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M1765.98 497.811l-7.31 7.189 7.31 7.189-2.82 2.8-7.32-7.189-2.83-2.8 2.83-2.8 7.32-7.189z" transform="translate(-1753 -495)"/></symbol>
+      </svg>
+    <header class="header-main  header-main--fluid">
+      <div class="container  container--between">
+        <div class="header-main__slogan  header-main__slogan--dark">
+          <div class="header-main__row">
+            <button class="header-main__arrow  hidden__mobile" type="button" >
+              <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
+            </button>
+            <a class="header-main__logo  header-main__logo--svg" href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo.png"  alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards">
+                <img class="header-main__img" src="img/icons/logo_mobile.svg"  alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards">
+              </picture>
+            </a>
+            <div class="header-main__inner  header-main__inner--small">
+              <h1 class="header-main__title  hidden">Гостиницы по лучшим ценам</h1>
+              <h2 class="header-main__title  header-main__title--thin  hidden__mobile">Москва, Россия</h2>
+              <h2 class="header-main__subtitle  hidden">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
+            </div>
+          </div>  
+        </div>
+        <div class="header-main__wrap-mobile">
+          <div class="result  result--light  result--mobile">
+            <div class="result__row  result__row--light">
+              <span class="result__col  result__col--large"><span class="hidden">23&ndash;25 января</span><span class="hidden__mobile">12&ndash;13 марта</span></span>
+              <span class="result__col  result__col--medium"><span class="hidden">3</span><span class="hidden__mobile">1</span>
+                <svg class="icon  icon--month-light" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>
+              </span>
+              <span class="result__col  result__col--medium">2
+                <svg class="icon  icon--grownups-light" width="7" height="18"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#grownups"></use></svg>
+              </span>
+              <span class="result__col  result__col--small">1
+                <svg class="icon  icon--children-light" width="6" height="12"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#children"></use></svg>
+              </span>  
+            </div>
+              <button class="btn  btn--result  hidden" type="button">Изменить</button>
+          </div>
+          <h2 class="header-main__title  header-main__title--medium  hidden__mobile">Гостиница Шератон Москва</h2>
+          <p class="header-main__text  hidden__mobile">Аэропорт Шереметьево</p>
         </div>
       </div>
-      <div class="result  result--light">
-        <div class="result__row  result__row--light-indent">
-          <span class="result__col  result__col--large">23&ndash;25 января</span>
-          <span class="result__col  result__col--medium">3
-            <svg class="icon  icon--month-light" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>
-          </span>
-          <span class="result__col  result__col--medium">2
-            <svg class="icon  icon--grownups-light" width="7" height="18"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#grownups"></use></svg>
-          </span>
-          <span class="result__col  result__col--small">1
-            <svg class="icon  icon--children-light" width="6" height="12"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#children"></use></svg>
-          </span>
-        </div>
-        <button class="btn  btn--result" type="button">Изменить</button>
-      </div>
-    </div>
-  </header>
+    </header>
     <main>
-      <div class="container  container--column">
+      <div class="container  container--col">
         <section class="description">
           <header class="description__header">
-            <h2 class="description__title-header">Palmira Bussines Club</h2>
-            <p class="description__subtitle">В центре города</p>
+            <h2 class="description__title-header  hidden">Palmira Bussines Club</h2>
+            <p class="description__subtitle  hidden">В центре города</p>
             <div class="rating  rating--size-tiny">
               <span class="rating__item">
                 <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
@@ -59,17 +76,24 @@
               <span class="rating__item">
                 <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
               </span>
+              <span class="rating__item  hidden__mobile">
+                <svg class="rating__star" width="11" height="11"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#star"></use></svg>
+              </span>
             </div>
              <p class="description__text">9 из 10 &mdash; по 1576 отзывам гостей</p>
           </header>
           <div class="description__wrap">
             <div class="description__container">
               <h3 class="description__title">
-                Класс &laquo;Эконом&raquo;
-                <span class="description__price">6 200 руб</span>
+                <span class="hidden">Класс &laquo;Эконом&raquo;</span>
+                <span class="hidden__mobile">Standart Room</span>
+                <span class="description__price">
+                  <span class="hidden">6 200 руб.</span>
+                  <span class="hidden__mobile">18 800 руб.</span>
+                </span>
               </h3>
               <ul class="description__list">
-                <li class="description__item">Стандартные номера &mdash; 32м.кв.</li>
+                <li class="description__item">Стандартные номера &mdash; 32 м.кв.</li>
                 <li class="description__item">Проживание 2 взрослых и 1 ребёнка</li>
                 <li class="description__item">Две односпальные кровати</li>
                 <li class="description__item">Нет бесплатной отмены</li>
@@ -77,10 +101,15 @@
                 <li class="description__item">Оплата сейчас</li>
               </ul>
             </div>
-            <div class="description__container">
+            <div class="slader  slader--dark  hidden__mobile">
+              <span class="slider__control  slider__control--active-dark"></span>
+              <span class="slider__control  slider__control--dark"></span>
+              <span class="slider__control  slider__control--dark"></span>
+            </div>
+            <div class="description__container  hidden">
               <h3 class="description__title">
                 Класс &laquo;Стандарт&raquo;
-                <span class="description__price">7 000 руб</span>
+                <span class="description__price">7 000 руб.</span>
               </h3>
               <ul class="description__list">
                 <li class="description__item">Стандартные номера &mdash; 32м.кв.</li>
@@ -91,10 +120,10 @@
                 <li class="description__item">Оплата сейчас</li>
               </ul>
             </div>
-            <div class="description__container">
+            <div class="description__container  hidden">
               <h3 class="description__title">
                 Класс &laquo;Люкс&raquo;
-                <span class="description__price">8 000 руб</span>
+                <span class="description__price">8 000 руб.</span>
               </h3>
               <ul class="description__list">
                 <li class="description__item">Стандартные номера &mdash; 32м.кв.</li>
@@ -106,12 +135,29 @@
               </ul>
             </div>
           </div>
+          <div class="description__footer  hidden__mobile">
+            <div class="result result--mobile">
+              <div class="result__row">
+                <span class="result__col  result__col--large">12&ndash;13 марта</span>
+                <span class="result__col  result__col--medium">1
+                  <svg class="icon  icon--month" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>
+                </span>
+                <span class="result__col  result__col--medium">2
+                  <svg class="icon  icon--grownups" width="7" height="18"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#grownups"></use></svg>
+                </span>
+                <span class="result__col  result__col--small">1
+                  <svg class="icon  icon--children" width="6" height="12"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#children"></use></svg>
+                </span>  
+              </div>
+            </div>  
+            <button class="btn  btn--result-mobile" type="button">Изменить</button>
+          </div>
         </section>
         <section class="info">
-          <h4 class="info__title  info__title--up">Информация</h4>
+          <h4 class="info__title  info__title--up"><span class="hidden">Информация</span><span class="hidden__mobile">Standart Room</span></h4>
           <ul class="info__list">
             <li class="info__item">Заселение в номера с 14:00</li>
-            <li class="info__item">Выезд из номера с 12:00</li>
+            <li class="info__item">Выезд из номера до 12:00</li>
             <li class="info__item">Номеров</li>
           </ul>
         </section>
@@ -122,9 +168,10 @@
             <li class="info__item">Зоны общественного пользования с кондиционированием</li>
             <li class="info__item">Номера для аллергиков</li>
             <li class="info__item">Банкомат на территории отеля</li>
-            <li class="info__item">Бар</li>
+            <li class="info__item  hidden">Бар</li>
           </ul>
-          <button class="btn btn--info" href="#">Подробнее</button>
+          <a class="info__link  hidden__mobile">Подробнее</a>
+          <button class="btn btn--info  hidden" href="#">Подробнее</button>
         </section>
         <section class="address">
           <h4 class="address__title">Расположение</h4>
@@ -134,10 +181,10 @@
           </ul>
         </section>
       </div>
-        <div class="map  map--indent"></div>
-        <div class="container  container--center">
-          <button class="btn btn--book" type="button">Забронировать</button>
-        </div>
+      <div class="map  map--indent"></div>
+      <div class="container  container--center">
+        <button class="btn btn--book" type="button">Забронировать</button>
+      </div>  
     </main>
     <!-- <script src="js/flexibility.js"></script>
     <script>

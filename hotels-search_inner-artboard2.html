@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Гостиницы: расширенный поиск</title>
+  </head>
+  <body class="page  page--light">
+    <svg style="display:none">
+      <symbol id="arrow-mobile" viewbox="0 0 13 20"><path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M1765.98 497.811l-7.31 7.189 7.31 7.189-2.82 2.8-7.32-7.189-2.83-2.8 2.83-2.8 7.32-7.189z" transform="translate(-1753 -495)"/></symbol>
+      <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
+    </svg>
+    <div class="container  container--col">
+      <header class="header-main  header-main--mobile">
+        <div class="header-main__row">
+          <button class="header-main__arrow" type="button">
+            <svg class="icon  icon--arrow-mobile" width="13" height="20"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#arrow-mobile"></use></svg>
+          </button>
+          <h2 class="header-main__title  header-main__title--light">Выберите место</h2>
+          <a class="header-main__logo  header-main__logo--slider" href="#">
+            <img class="header-main__img" src="img/icons/logo_mobile.svg" width="33" height="25" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards">
+          </a>
+        </div>  
+      </header>
+      <main>
+        <form class="form  form--size-mobile" action="/echo" method="post">
+          <div class="form__inner-search  form__inner-search--dropdown">
+            <div class="form__dropdown">
+              <p class="form__item-dropdown"><span class="form__bold">Москва,</span> Россия</p>
+              <p class="form__item-dropdown"><span class="form__bold">Монте-Карло,</span> Монако</p>
+              <p class="form__item-dropdown"><span class="form__bold">Мо,</span> Франция</p>
+              <p class="form__item-dropdown"><span class="form__bold">Москва,</span> Россия</p>
+              <p class="form__item-dropdown"><span class="form__bold">Монте-Карло,</span> Монако</p>
+              <p class="form__item-dropdown"><span class="form__bold">Мо,</span> Франция</p>
+            </div>
+            <label class="visually-hidden" for="form-search">В каком городе?</label>
+            <input class="form__search"  type="search" name="search" id="form-search" value="В каком городе?">
+            <span class="form__icon-search"><svg class="form__svg-search  form__svg-search--light" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
+          </div>
+          <button class="btn btn--form-light" type="button">Свое местоположение</button>
+        </form>
+      </main>  
+    </div>  
+  </body>
+</html>  

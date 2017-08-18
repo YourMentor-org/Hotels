@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>Гостиницы: расширенный поиск</title>
+    <script src="js/respimage.min.js" async></script>
   </head>
-  <body class="page  page--background">
+  <body class="page  page--bg">
     <svg style="display:none">
       <symbol id="search" viewbox="0 0 16.09 16.12"><path d="M10.71 10.85l4.36 4.26m-8.38-2.95a5.576 5.576 0 1 0-5.7-5.58 5.64 5.64 0 0 0 5.7 5.58z"/></symbol>
       <symbol id="down-arrow" viewbox="0 0 14 9"><path d="M1.97.01L7 5.07 12.03.01l1.96 1.96-5.03 5.06L7 8.99 5.04 7.03.01 1.97z"/></symbol>
@@ -16,11 +17,11 @@
       <symbol id="children" viewbox="0 0 6 12"><path d="M2.987 2.82a1.41 1.41 0 1 0-1.47-1.41 1.44 1.44 0 0 0 1.47 1.41zM5.98 7.04L4.79 3.5a.52.52 0 0 0-.484-.34H1.668a.52.52 0 0 0-.483.34l-1.19 3.54a.326.326 0 0 0 .04.3.337.337 0 0 0 .277.12h.3a.535.535 0 0 0 .484-.34l.338-1.01v5.24a.665.665 0 0 0 .678.65h.048a.664.664 0 0 0 .678-.65V7.93h.29v3.42a.664.664 0 0 0 .677.65h.047a.664.664 0 0 0 .678-.65V6.11l.34 1.01a.533.533 0 0 0 .483.34h.305a.337.337 0 0 0 .277-.12.323.323 0 0 0 .045-.3z"/></symbol>
       <symbol id="left-arrow" viewbox="0 0 10.906 16"><path d="M7.945-.01L0 7.99l7.945 8 2.96-2.95-5.02-5.05 5.02-5.06z"/></symbol>
       <symbol id="right-arrow" viewbox="0 0 10.91 16"><path d="M2.96-.01l7.95 8-7.95 8L0 13.04l5.02-5.05L0 2.93z"/></symbol>  
-      </svg>
-    <div class="container  container--column">
-      <header class="header-main  header-main--size">
+    </svg>
+    <div class="container  container--col">
+      <header class="header-main  header-main--medium">
         <div class="header-main__slogan">
-          <a class="header-main__logo  header-main__logo--indent" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
+          <a class="header-main__logo  header-main__logo--png" href="#"><img src="img/logo.png" width="69" height="54" alt="JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards"></a>
           <div class="header-main__inner">
             <h1 class="header-main__title">Гостиницы <span>по лучшим ценам</span></h1>
             <h2 class="header-main__subtitle">JCB &mdash; лучший интернет-сервис по версии National Geographic Traveler Awards</h2>
@@ -29,13 +30,12 @@
       </header>
       <main>
         <form class="form  form--layout" action="/echo" method="post">
-          <div class="form__inner-search  form__inner-search--size  form__inner-search--active  mobile-none">
+          <div class="form__inner-search  form__inner-search--size  hidden">
             <label class="visually-hidden" for="form-search">Направление, город, название отеля: например, Париж, Милан</label>
-            <input class="form__search
-            "  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан">
+            <input class="form__search"  type="search" name="search" id="form-search" value="Направление, город, название отеля: например, Париж, Милан">
             <span class="form__icon-search"><svg class="form__svg-search" width="16" height="16"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#search"></use></svg></span>
           </div>
-          <div class="form__wrap  form__wrap--row  mobile-none">
+          <div class="form__wrap  form__wrap--row  hidden">
             <div class="form__field   form__field--calendar">
               <label class="form__label" for="date-in">Выберите дату вселения</label>
               <input class="form__input" type="text" name="arrival-date" id="date-in" value="23 января, 2017" placeholder="23 января, 2017">
@@ -197,7 +197,7 @@
               </ul>
             </div>
           </div>
-          <div class="form__wrap  form__wrap--checkbox  mobile-none">
+          <div class="form__wrap  form__wrap--checkbox  hidden">
             <input class="form__checkbox" type="checkbox" name="discount" id="discount">
             <label class="form__label-checkbox" for="discount">Добавить перелет и получить скидку</label>
             <svg class="icon  icon--plane" width="17" height="17"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#plane"></use></svg>
@@ -209,7 +209,7 @@
               <span class="slider__control"></span>
             </div>
             <button class="btn  btn--form" type="submit">Начать поиск</button>
-            <div class="result__row  result__row--dark  mobile-none">
+            <div class="result__row  result__row--dark  hidden">
               <span class="result__col  result__col--large">23&ndash;25 января</span>
               <span class="result__col  result__col--medium">3
                 <svg class="icon  icon--month" width="13" height="13"><use xmlns="http://www.w3.org/2000/svg" xlink:href="#month"></use></svg>
@@ -225,9 +225,5 @@
         </form>
       </main>
     </div>
-    <!-- <script src="js/flexibility.js"></script>
-    <script>
-      flexibility(document.documentElement);
-    </script>-->
   </body>
 </html>

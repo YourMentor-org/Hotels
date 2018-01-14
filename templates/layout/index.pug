@@ -1,0 +1,23 @@
+include ../partials/mixin/header.pug
+include ../partials/mixin/search.pug
+include ../partials/mixin/result.pug
+include ../partials/mixin/button.pug
+include ../partials/mixin/icon.pug
+
+block body
+  - var bodyName = "page--column"
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width")
+    link(href='css/style.css', rel='stylesheet')
+    block title
+    title #{title}
+  body.page(class=bodyName)
+    include ../partials/block/sprite.pug
+    block header
+      +header(true)
+    block main
+      

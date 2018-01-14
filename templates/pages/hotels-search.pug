@@ -1,0 +1,21 @@
+extends ../layout/index
+
+include ../partials/mixin/catalog.pug
+
+block title
+  - var title='Гостиницы: расширенный поиск'
+
+block header
+  +header(false)
+block main
+  main
+    .container.container--column
+      form.form.form--size(action="/echo" method="post")
+        +search('narrow', 'Поиск по названию')
+      section.catalog.catalog--indent-top
+        +catalog('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', '4', '6 200 руб.')
+        +catalog('img/hotel-slavyanka-orange.jpg', 'Гостиница Славянка', 'Проспект Мира', '3', '5 000 руб.')
+        +catalog('img/hotel-slavyanka-blue.jpg', 'Гостиница Славянка', 'Проспект Мира', '5', '8 500 руб.')
+        +catalog('img/hotel-palmira.jpg', 'Palmira Business Club', 'В центре города', '4', '6 200 руб.')
+        +catalog('img/hotel-slavyanka-orange.jpg', 'Гостиница Славянка', 'Проспект Мира', '3', '5 000 руб.')
+        +catalog('img/hotel-slavyanka-blue.jpg', 'Гостиница Славянка', 'Проспект Мира', '5', '8 500 руб.')

@@ -1,0 +1,15 @@
+mixin description(title, text)
+
+  .description__container
+    h3.description__title= title
+      |
+      |
+      span.description__price=text
+    ul.description__list
+      li.description__item Стандартные номера &mdash; 32м.кв.
+      li.description__item Проживание 2 взрослых и 1 ребёнка
+      li.description__item Две односпальные кровати
+      li.description__item Нет бесплатной отмены
+      li.description__item Налоги и сборы включены
+      li.description__item Оплата сейчас
+  block
